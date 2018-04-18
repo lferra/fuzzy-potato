@@ -1,0 +1,31 @@
+diff -ru work.orig/src/osd/modules/font/font_sdl.c work/src/osd/modules/font/font_sdl.c
+--- work.orig/src/osd/modules/font/font_sdl.c	2015-03-11 18:43:43.528037322 -0700
++++ work/src/osd/modules/font/font_sdl.c	2015-03-11 18:44:00.170439682 -0700
+@@ -8,11 +8,7 @@
+ 
+ #if defined(SDLMAME_UNIX) && (!defined(SDLMAME_MACOSX)) && (!defined(SDLMAME_SOLARIS)) && (!defined(SDLMAME_HAIKU)) && (!defined(SDLMAME_EMSCRIPTEN))
+ 
+-#if (SDLMAME_SDL2)
+-#include <SDL2/SDL_ttf.h>
+-#else
+ #include <SDL/SDL_ttf.h>
+-#endif
+ #ifndef SDLMAME_HAIKU
+ #include <fontconfig/fontconfig.h>
+ #endif
+diff -ru work.orig/src/osd/sdl/sdl.mak work/src/osd/sdl/sdl.mak
+--- work.orig/src/osd/sdl/sdl.mak	2015-03-11 18:43:43.526037273 -0700
++++ work/src/osd/sdl/sdl.mak	2015-03-11 18:44:00.170439682 -0700
+@@ -649,11 +649,7 @@
+ endif
+ LIBS += $(FONTCONFIGLIBS)
+ 
+-ifeq ($(SDL_LIBVER),sdl2)
+-LIBS += -lSDL2_ttf
+-else
+ LIBS += -lSDL_ttf
+-endif
+ 
+ # FIXME: should be dealt with elsewhere
+ # libs that Haiku doesn't want but are mandatory on *IX
+

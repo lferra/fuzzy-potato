@@ -1,0 +1,259 @@
+# ChangeLog for games-emulation/qmc2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+
+*qmc2-0.51 (17 May 2015)
+
+  17 May 2015; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.51.ebuild:
+  Bumped.
+
+*qmc2-0.49 (08 Mar 2015)
+
+  08 Mar 2015; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.49.ebuild:
+  Bumped.
+
+  12 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> -qmc2-0.38.ebuild,
+  -qmc2-0.40.ebuild, -qmc2-0.42.ebuild, qmc2-0.47.ebuild:
+  Added missing dep. Removed cruft.
+
+*qmc2-0.47 (12 Jan 2015)
+
+  12 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.47.ebuild:
+  Bumped. Removed sqlite flag, as there is now a hard dependency on qtsql.
+
+*qmc2-0.42 (06 Feb 2014)
+
+  06 Feb 2014; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.42.ebuild:
+  Bumped.
+
+*qmc2-0.40 (05 Nov 2013)
+
+  05 Nov 2013; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.40.ebuild,
+  +files/qmc2-0.40-makefile.patch:
+  Bumped.
+
+  18 Oct 2013; Michał Ziąbkowski <mziab@o2.pl> -qmc2-0.36-r1.ebuild,
+  -qmc2-0.37.ebuild, qmc2-0.38.ebuild:
+  Fixed slot in phonon dep. Removed cruft.
+
+*qmc2-0.38 (21 Feb 2013)
+
+  21 Feb 2013; Michał Ziąbkowski <mziab@o2.pl> -qmc2-0.2_beta18.ebuild,
+  -qmc2-0.2_beta19.ebuild, -qmc2-0.2_beta20.ebuild,
+  -files/qmc2-0.2_beta17-makefile.patch, -files/qmc2-0.2_beta20-minizip.patch,
+  -qmc2-0.34.ebuild, -qmc2-0.35.ebuild, -files/qmc2-0.35-nophonon-build.patch,
+  -qmc2-0.36.ebuild, +qmc2-0.38.ebuild:
+  Bumped. Removed cruft.
+
+*qmc2-0.37 (23 Sep 2012)
+
+  23 Sep 2012; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.37.ebuild:
+  Bumped. Fixed HOMEPAGE and URI.
+
+*qmc2-0.36-r1 (24 Jun 2012)
+
+  24 Jun 2012; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.36.ebuild,
+  +qmc2-0.36-r1.ebuild:
+  Dropped redundant patch for 0.36. Rev-bumped with EAPI=4 port.
+
+*qmc2-0.36 (01 Jun 2012)
+
+  01 Jun 2012; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.36.ebuild:
+  Bumped.
+
+  20 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.35.ebuild,
+  +files/qmc2-0.35-nophonon-build.patch:
+  Fixed build without phonon and fixed Qt deps.
+
+*qmc2-0.35 (06 Feb 2012)
+
+  06 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.35.ebuild:
+  Bumped.
+
+  16 Nov 2011; Michał Ziąbkowski <mziab@o2.pl>
+  -files/qmc2-0.2_beta6-makefile.patch, -files/qmc2-0.2_beta7-makefile.patch:
+  Removed old patches.
+
+  16 Nov 2011; Michał Ziąbkowski <mziab@o2.pl> -qmc2-0.2_beta15.ebuild,
+  -qmc2-0.2_beta16.ebuild, -qmc2-0.2_beta17.ebuild:
+  Removed cruft.
+
+*qmc2-0.34 (16 Nov 2011)
+
+  16 Nov 2011; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.34.ebuild:
+  Bumped.
+
+  15 Nov 2011; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta20.ebuild:
+  Added missing epatch.
+
+  14 Nov 2011; Piotr Szymaniak <szarpaj@grubelek.pl> qmc2-0.2_beta20.ebuild,
+  +files/qmc2-0.2_beta20-minizip.patch:
+  Added patch for zlib, thanks to Steve Gill <necrotaur@gmail.com>.
+
+*qmc2-0.2_beta20 (04 Jul 2011)
+
+  04 Jul 2011; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta20.ebuild,
+  +files/qmc2-0.2_beta20-makefile.patch:
+  Bumped.
+
+*qmc2-0.2_beta19 (04 Apr 2011)
+
+  04 Apr 2011; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta19.ebuild:
+  Bumped.
+
+*qmc2-0.2_beta18 (01 Apr 2011)
+
+  01 Apr 2011; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta18.ebuild:
+  Bumped.
+
+  27 Mar 2011; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta15.ebuild,
+  qmc2-0.2_beta16.ebuild, qmc2-0.2_beta17.ebuild:
+  Updated phonon dep.
+
+  24 Oct 2010; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta17.ebuild,
+  +files/qmc2-0.2_beta17-makefile.patch:
+  Updated Makefile patch.
+
+*qmc2-0.2_beta17 (24 Oct 2010)
+
+  24 Oct 2010; Michał Ziąbkowski <mziab@o2.pl> -qmc2-0.2_beta13.ebuild,
+  -qmc2-0.2_beta14.ebuild, +qmc2-0.2_beta17.ebuild:
+  Bumped. Removed cruft.
+
+*qmc2-0.2_beta16 (01 Aug 2010)
+
+  01 Aug 2010; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta16.ebuild:
+  Bumped.
+
+*qmc2-0.2_beta15 (16 May 2010)
+
+  16 May 2010; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta15.ebuild:
+  Bumped.
+
+  15 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> -qmc2-0.2_beta11.ebuild,
+  -qmc2-0.2_beta12.ebuild:
+  Removed cruft.
+
+*qmc2-0.2_beta14 (13 Mar 2010)
+
+  13 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta14.ebuild:
+  Bumped. Fixed some missing deps. Added sqlite flag. Some minor clean-up.
+
+  31 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta11.ebuild,
+  qmc2-0.2_beta12.ebuild, qmc2-0.2_beta13.ebuild:
+  We don't need to inherit qt4.
+
+*qmc2-0.2_beta13 (04 Jan 2010)
+
+  04 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta13.ebuild:
+  Bumped.
+
+  02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> metadata.xml:
+  Fixed metadata structure. Oops.
+
+  02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> metadata.xml:
+  Added missing flags to metadata.xml.
+
+  06 Nov 2009; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta12.ebuild:
+  Bumped.
+
+  08 Oct 2009; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta11.ebuild:
+  Fixed whitespace.
+
+  11 Sep 2009; Michał Ziąbkowski <mziab@o2.pl> -qmc2-0.2_beta8.ebuild,
+  -qmc2-0.2_beta9.ebuild, -qmc2-0.2_beta10.ebuild, +qmc2-0.2_beta11.ebuild:
+  Bumped and fixed Qt dep. Removed cruft.
+
+  30 Jul 2009; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta10.ebuild:
+  Bumped.
+
+  16 Jun 2009; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta9.ebuild:
+  Bumped.
+
+  26 May 2009; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta8.ebuild:
+  Fix some build system stupidity to allow both sdlmame and sdlmess backends
+  to be enabled at the same time. Will probably need some further tweaking.
+  Not very pretty, but works for me.
+
+  25 May 2009; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta8.ebuild:
+  Fixed thinko.
+
+  25 May 2009; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta8.ebuild:
+  Fixed description, doh.
+
+  25 May 2009; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta8.ebuild:
+  Added proper sdlmess support.
+
+  05 May 2009; Michał Ziąbkowski <mziab@o2.pl> -qmc2-0.2_beta6.ebuild,
+  -qmc2-0.2_beta7.ebuild, qmc2-0.2_beta8.ebuild:
+  Removed cruft. Fixed phonon dep.
+
+  24 Apr 2009; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta8.ebuild:
+  Bumped.
+
+  17 Mar 2009; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta7.ebuild,
+  +files/qmc2-0.2_beta7-makefile.patch:
+  Bumped. Will revisit sdlmess support later.
+
+  17 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta6.ebuild:
+  Fixed libsdl dep.
+
+  15 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta6.ebuild:
+  Fixed phonon dep.
+
+  21 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta6.ebuild:
+  Fixed errors reported by repoman.
+
+  14 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta6.ebuild:
+  Ported to EAPI 2
+
+  09 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta6.ebuild,
+  +files/qmc2-0.2_beta6-makefile.patch, -files/qmc2-makefile.patch:
+  Bumped. Removed cruft.
+
+  20 Oct 2008; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta3.ebuild,
+  qmc2-0.2_beta4.ebuild:
+  Fixed debug flag.
+
+  20 Oct 2008; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta5.ebuild:
+  Bumped.
+
+  20 Oct 2008; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta4.ebuild:
+  Added missing dep.
+
+  28 Aug 2008; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta4.ebuild:
+  Bumped.
+
+  02 Aug 2008; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta3.ebuild:
+  Simplified USE flag check.
+
+  29 Jul 2008; Michał Ziąbkowski <mziab@o2.pl> -qmc2-0.2_beta1.ebuild,
+  -qmc2-0.2_beta2.ebuild, qmc2-0.2_beta3.ebuild:
+  Replaced qt4_min_version. Removed cruft.
+
+  26 Jul 2008; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta3.ebuild:
+  Bumped. Fixed deps. Will give it some more polish soon.
+
+  20 May 2008; Michał Ziąbkowski <mziab@o2.pl> -qmc2-0.1-r1.ebuild:
+  Removed oldest ebuild.
+
+  12 May 2008; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta2.ebuild:
+  Bumped.
+
+  28 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta1.ebuild:
+  Readded keywords.
+
+  28 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> -qmc2-0.1.ebuild,
+  +qmc2-0.1-r1.ebuild, qmc2-0.2_beta1.ebuild:
+  Gah, missed GAMES_DATADIR. Fixed. Also added a new ebuild for the old
+  version. Purged the old one.
+
+  28 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta1.ebuild:
+  Bumped and cleaned the ebuild up a bit.
+
+  24 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> qmc2-0.1.ebuild:
+  Updated by previous author.
+
+*qmc2-0.1 (19 Feb 2008)
+
+  19 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> +qmc2-0.1.ebuild:
+  Initial ebuild by Michał "mziab" Ziąbkowski.

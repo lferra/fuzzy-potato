@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd></herd>
+<maintainer>
+  <email>mziab@o2.pl</email>
+  <name>Michał Ziąbkowski</name>
+</maintainer>
+<use>
+	<flag name='glib'>Build glib bindings</flag>
+	<flag name='libnl'>Build libnl backend</flag>
+	<flag name='rtnetlink'>Build experimental rtnetlink backend</flag>
+</use>
+</pkgmetadata>

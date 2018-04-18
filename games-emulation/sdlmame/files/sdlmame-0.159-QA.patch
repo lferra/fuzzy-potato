@@ -1,0 +1,133 @@
+diff -ru work.orig/makefile work/makefile
+--- work.orig/makefile	2015-03-11 18:38:24.955335239 -0700
++++ work/makefile	2015-03-11 18:39:03.870276079 -0700
+@@ -363,14 +363,16 @@
+ 
+ # compiler, linker and utilities
+ ifneq ($(TARGETOS),emscripten)
+-AR = @ar
+-CC = @gcc
+-LD = @g++
++AR ?= @ar
++CC ?= @gcc
++CXX ?= @g++
++LD = $(CXX)
+ endif
+ MD = -mkdir$(BUILD_EXE)
+ RM = @rm -f
+ OBJDUMP = @objdump
+-PYTHON = @python
++PYTHON ?= @python
++PKG_CONFIG ?= pkg-config
+ 
+ #-------------------------------------------------
+ # form the name of the executable
+@@ -523,7 +525,7 @@
+ 
+ # CFLAGS is defined based on C or C++ targets
+ # (remember, expansion only happens when used, so doing it here is ok)
+-CFLAGS = $(CCOMFLAGS) $(CPPONLYFLAGS) $(INCPATH)
++CFLAGS += $(CCOMFLAGS) $(CPPONLYFLAGS) $(INCPATH)
+ 
+ # we compile C-only to C89 standard with GNU extensions
+ # we compile C++ code to C++98 standard with GNU extensions
+@@ -535,9 +537,6 @@
+ endif
+ COBJFLAGS += -x objective-c++
+ 
+-# this speeds it up a bit by piping between the preprocessor/compiler/assembler
+-CCOMFLAGS += -pipe
+-
+ # add -g if we need symbols, and ensure we have frame pointers
+ ifdef SYMBOLS
+ CCOMFLAGS += -g$(SYMLEVEL) -fno-omit-frame-pointer -fno-optimize-sibling-calls
+@@ -564,22 +563,6 @@
+ CCOMFLAGS += -pg
+ endif
+ 
+-# add the optimization flag
+-CCOMFLAGS += -O$(OPTIMIZE)
+-
+-# add the error warning flag
+-ifndef NOWERROR
+-CCOMFLAGS += -Werror
+-endif
+-
+-# if we are optimizing, include optimization options
+-ifneq ($(OPTIMIZE),0)
+-CCOMFLAGS += -fno-strict-aliasing $(ARCHOPTS)
+-ifdef LTO
+-CCOMFLAGS += -flto
+-endif
+-endif
+-
+ ifdef SSE2
+ CCOMFLAGS += -msse2
+ endif
+@@ -662,30 +645,11 @@
+ # linking flags
+ #-------------------------------------------------
+ 
+-# LDFLAGS are used generally; LDFLAGSEMULATOR are additional
+-# flags only used when linking the core emulator
+-LDFLAGS =
+-ifneq ($(TARGETOS),macosx)
+-ifneq ($(TARGETOS),os2)
+-ifneq ($(TARGETOS),solaris)
+-LDFLAGS = -Wl,--warn-common
+-endif
+-endif
+-endif
+-LDFLAGSEMULATOR =
+-
+ # add profiling information for the linker
+ ifdef PROFILE
+ LDFLAGS += -pg
+ endif
+ 
+-# strip symbols and other metadata in non-symbols and non profiling builds
+-ifndef SYMBOLS
+-ifneq ($(TARGETOS),macosx)
+-LDFLAGS += -s
+-endif
+-endif
+-
+ ifneq ($(OPTIMIZE),0)
+ ifdef LTO
+ LDFLAGS += -flto
+diff -ru work.orig/src/osd/sdl/sdl.mak work/src/osd/sdl/sdl.mak
+--- work.orig/src/osd/sdl/sdl.mak	2015-03-11 18:38:20.074217228 -0700
++++ work/src/osd/sdl/sdl.mak	2015-03-11 18:41:08.653292939 -0700
+@@ -24,6 +24,8 @@
+ # uncomment and edit next line to specify a distribution
+ # supported debian-stable, ubuntu-intrepid
+ 
++PKG_CONFIG ?= pkg-config
++
+ # DISTRO = debian-stable
+ # DISTRO = ubuntu-intrepid
+ # DISTRO = gcc44-generic
+@@ -107,9 +109,9 @@
+ endif
+ 
+ ifdef SDL_INSTALL_ROOT
+-SDL_CONFIG = $(SDL_INSTALL_ROOT)/bin/$(SDL_LIBVER)-config
++SDL_CONFIG ?= $(SDL_INSTALL_ROOT)/bin/$(SDL_LIBVER)-config
+ else
+-SDL_CONFIG = $(SDL_LIBVER)-config
++SDL_CONFIG ?= $(SDL_LIBVER)-config
+ endif
+ 
+ ifeq ($(SDL_LIBVER),sdl2)
+@@ -761,8 +763,8 @@
+ #-------------------------------------------------
+ 
+ ifndef NO_USE_QTDEBUG
+-$(OSDOBJ)/%.moc.c: $(OSDSRC)/%.h
+-	$(MOC) $(MOCINCPATH) $< -o $@
++INCPATH += $(shell $(PKG_CONFIG) QtGui --cflags)
++LIBS += $(shell $(PKG_CONFIG) QtGui --libs)
+ 
+ DEBUGOBJS = \
+ 	$(OSDOBJ)/modules/debugger/qt/debuggerview.o \
+

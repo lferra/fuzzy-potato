@@ -1,0 +1,5 @@
+*finalterm-9999 (01 Jun 2015)
+
+  01 Jun 2015; Justin Lecher <jlec@gentoo.org> +finalterm-9999.ebuild,
+  +metadata.xml:
+  x11-terms/finalterm: Import from sunrise

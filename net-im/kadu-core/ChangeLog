@@ -1,0 +1,829 @@
+# ChangeLog for net-im/kadu-core
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  29 Mar 2015; Michał Ziąbkowski <mziab@o2.pl> kadu-core-3.0_beta1.ebuild:
+  Added missing dep.
+
+*kadu-core-3.0_beta1 (29 Mar 2015)
+
+  29 Mar 2015; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-3.0_beta1.ebuild:
+  Bumped.
+
+  24 Mar 2015; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-2.1.ebuild:
+  Bumped.
+
+*kadu-core-2.1 (24 Mar 2015)
+
+  24 Mar 2015; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-2.1.ebuild:
+  Bumped.
+
+  23 Mar 2015; Michał Ziąbkowski <mziab@o2.pl> kadu-core-1.5-r1.ebuild:
+  Added missing qtdeclarative dep.
+
+*kadu-core-3.0_alpha2 (09 Mar 2015)
+
+  09 Mar 2015; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-3.0_alpha2.ebuild:
+  Bumped.
+
+  04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl> kadu-core-1.5-r1.ebuild:
+  Stabled Kadu 1.5.
+
+  04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl> -kadu-core-0.12.3.ebuild,
+  -kadu-core-1.0.ebuild, -kadu-core-1.1.ebuild, -kadu-core-1.2.ebuild,
+  -kadu-core-1.3.ebuild, -kadu-core-1.4.ebuild, -kadu-core-1.5.ebuild,
+  -kadu-core-2.0_rc1.ebuild, -kadu-core-2.0_rc2.ebuild,
+  -kadu-core-2.0_rc3.ebuild,
+  -files/kadu-core-1.0_alpha2-missing-includes.patch,
+  -files/kadu-core-1.0_alpha5-missing-includes.patch,
+  -files/kadu-core-1.0_alpha5-sort-by-receive-date.patch,
+  -files/kadu-core-2.0_alpha1-missing-includes.patch:
+  Remove cruft.
+
+*kadu-core-3.0_alpha1-r1 (27 Feb 2015)
+
+  27 Feb 2015; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-3.0_alpha1-r1.ebuild,
+  +files/kadu-core-3.0_alpha1-missing-includes.patch:
+  Rev-bump to fix build of tabs and gadu_protocol.
+
+*kadu-core-3.0_alpha1 (23 Feb 2015)
+
+  23 Feb 2015; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-3.0_alpha1.ebuild:
+  Bumped.
+
+*kadu-core-2.0 (21 Feb 2015)
+
+  21 Feb 2015; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-2.0.ebuild:
+  Bumped.
+
+*kadu-core-2.0_rc3 (14 Feb 2015)
+
+  14 Feb 2015; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-2.0_rc3.ebuild:
+  Bumped.
+
+*kadu-core-2.0_rc2 (07 Feb 2015)
+
+  07 Feb 2015; Michał Ziąbkowski <mziab@o2.pl> kadu-core-2.0_rc1.ebuild,
+  +kadu-core-2.0_rc2.ebuild:
+  Bumped.
+
+*kadu-core-2.0_rc1 (01 Feb 2015)
+
+  01 Feb 2015; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-2.0_rc1.ebuild:
+  Bumped.
+
+*kadu-core-1.5-r1 (29 Jan 2015)
+
+  29 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.5-r1.ebuild,
+  +files/kadu-core-1.5-cmake-install-prefix.patch:
+  Backported 2.0 patch to fix build with cmake-3.1.0.
+
+*kadu-core-2.0_beta1 (24 Jan 2015)
+
+  24 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-2.0_beta1.ebuild:
+  Bumped.
+
+*kadu-core-1.5 (19 Jan 2015)
+
+  19 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.5.ebuild:
+  Bumped.
+
+  11 Jan 2015; Michał Ziąbkowski <mziab@o2.pl>
+  files/kadu-core-2.0_alpha1-missing-includes.patch:
+  Yet another missing api header. Hopefully fixes mpris_mediaplayer.
+
+  11 Jan 2015; Michał Ziąbkowski <mziab@o2.pl>
+  files/kadu-core-2.0_alpha1-missing-includes.patch:
+  Another missing api header.
+
+*kadu-core-2.0_alpha2 (11 Jan 2015)
+
+  11 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-2.0_alpha2.ebuild:
+  Bumped.
+
+  11 Jan 2015; Michał Ziąbkowski <mziab@o2.pl>
+  files/kadu-core-2.0_alpha1-missing-includes.patch:
+  Fixed another missing api header.
+
+  10 Jan 2015; Michał Ziąbkowski <mziab@o2.pl>
+  files/kadu-core-2.0_alpha1-missing-includes.patch:
+  Fixed more missing includes to fix autoaway.
+
+  10 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> kadu-core-2.0_alpha1.ebuild,
+  +files/kadu-core-2.0_alpha1-missing-includes.patch:
+  Fixed missing API includes for gadu_protocol.
+
+  08 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> kadu-core-2.0_alpha1.ebuild:
+  Remove ayatana USE flag.
+
+  08 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> kadu-core-2.0_alpha1.ebuild:
+  This needs qtquick1, not qtdeclarative.
+
+  07 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> kadu-core-2.0_alpha1.ebuild:
+  Removed redundant flag.
+
+  07 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> kadu-core-2.0_alpha1.ebuild:
+  Explicitly depend on qtwidgets.
+
+  07 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> kadu-core-2.0_alpha1.ebuild:
+  Fixed qca dep.
+
+*kadu-core-2.0_alpha1 (04 Jan 2015)
+
+  04 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-2.0_alpha1.ebuild:
+  Bumped.
+
+*kadu-core-1.4 (02 Jan 2015)
+
+  02 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.4.ebuild:
+  Bumped.
+
+*kadu-core-1.3 (13 Dec 2014)
+
+  13 Dec 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.3.ebuild:
+  Bumped.
+
+*kadu-core-1.2 (07 Nov 2014)
+
+  07 Nov 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.2.ebuild:
+  Bumped.
+
+*kadu-core-1.1 (18 Oct 2014)
+
+  18 Oct 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.1.ebuild:
+  Bumped.
+
+  01 Oct 2014; Michał Ziąbkowski <mziab@o2.pl> -kadu-core-1.0_alpha2.ebuild,
+  -kadu-core-1.0_alpha3.ebuild, -kadu-core-1.0_alpha4.ebuild,
+  -kadu-core-1.0_alpha5.ebuild, -kadu-core-1.0_alpha5-r1.ebuild,
+  -kadu-core-1.0_rc1.ebuild, -kadu-core-1.0_rc2.ebuild,
+  -kadu-core-1.0_rc3.ebuild, -kadu-core-1.0_rc4.ebuild,
+  -kadu-core-1.0_rc5.ebuild, -kadu-core-1.0_rc7.ebuild,
+  -kadu-core-1.0_rc8.ebuild, -kadu-core-1.0_rc9.ebuild,
+  -kadu-core-1.0_rc10.ebuild, -kadu-core-1.0_rc11.ebuild:
+  Removed 1.0_alpha modules.
+
+  01 Oct 2014; Michał Ziąbkowski <mziab@o2.pl> -kadu-core-1.0_rc1.ebuild,
+  -kadu-core-1.0_rc2.ebuild, -kadu-core-1.0_rc3.ebuild,
+  -kadu-core-1.0_rc4.ebuild, -kadu-core-1.0_rc5.ebuild,
+  -kadu-core-1.0_rc7.ebuild, -kadu-core-1.0_rc8.ebuild,
+  -kadu-core-1.0_rc9.ebuild, -kadu-core-1.0_rc10.ebuild,
+  -kadu-core-1.0_rc11.ebuild:
+  Removed 1.0_rc modules.
+
+*kadu-core-1.0 (28 Sep 2014)
+
+  28 Sep 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.0.ebuild:
+  Bumped.
+
+*kadu-core-1.0_rc11 (20 Sep 2014)
+
+  20 Sep 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.0_rc11.ebuild:
+  Bumped.
+
+*kadu-core-1.0_rc10 (16 Sep 2014)
+
+  16 Sep 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.0_rc10.ebuild:
+  Bumped.
+
+*kadu-core-1.0_rc9 (06 Sep 2014)
+
+  06 Sep 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.0_rc9.ebuild:
+  Bumped.
+
+*kadu-core-1.0_rc8 (23 Aug 2014)
+
+  23 Aug 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.0_rc8.ebuild:
+  Bumped.
+
+*kadu-core-1.0_rc7 (21 Aug 2014)
+
+  21 Aug 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.0_rc7.ebuild:
+  Bumped.
+
+*kadu-core-1.0_rc5 (02 Aug 2014)
+
+  02 Aug 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.0_rc5.ebuild:
+  Bumped.
+
+*kadu-core-1.0_rc4 (25 Jul 2014)
+
+  25 Jul 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.0_rc4.ebuild:
+  Bumped.
+
+*kadu-core-1.0_rc3 (23 Jul 2014)
+
+  23 Jul 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.0_rc3.ebuild:
+  Bumped.
+
+*kadu-core-1.0_rc2 (10 Jun 2014)
+
+  10 Jun 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.0_rc2.ebuild:
+  Bumped.
+
+*kadu-core-1.0_rc1 (02 May 2014)
+
+  02 May 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.0_rc1.ebuild:
+  Bumped.
+
+*kadu-core-1.0_alpha5-r1 (27 Mar 2014)
+
+  27 Mar 2014; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-1.0_alpha5-r1.ebuild,
+  +files/kadu-core-1.0_alpha5-sort-by-receive-date.patch:
+  Rev-bump with hotfix to fix broken message sorting in GG chats.
+
+  08 Mar 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.0_alpha5.ebuild,
+  +files/kadu-core-1.0_alpha5-missing-includes.patch:
+  Fixed missing SDK headers which broke kadu-history build.
+
+*kadu-core-1.0_alpha5 (08 Mar 2014)
+
+  08 Mar 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.0_alpha5.ebuild:
+  Bumped.
+
+*kadu-core-1.0_alpha4 (02 Feb 2014)
+
+  02 Feb 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.0_alpha4.ebuild:
+  Bumped.
+
+*kadu-core-1.0_alpha3 (29 Jan 2014)
+
+  29 Jan 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.0_alpha3.ebuild:
+  Bumped
+
+  17 Nov 2013; Michał Ziąbkowski <mziab@o2.pl> kadu-core-1.0_alpha2.ebuild,
+  +files/kadu-core-1.0_alpha2-missing-includes.patch:
+  Fixed missing includes needed for kadu-history to build.
+
+*kadu-core-1.0_alpha2 (16 Nov 2013)
+
+  16 Nov 2013; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.0_alpha2.ebuild:
+  Bumped to Kadu 1.0_alpha2.
+
+  18 Apr 2013; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.12.3.ebuild:
+  Stabled.
+
+  18 Apr 2013; Michał Ziąbkowski <mziab@o2.pl> -kadu-core-0.11.3.ebuild,
+  -kadu-core-0.12.0.ebuild, -files/kadu-core-0.12.0_beta1-cmake.patch,
+  -files/kadu-core-0.12.0_beta2-cmake.patch, -kadu-core-0.12.1.ebuild,
+  -kadu-core-0.12.2.ebuild, -kadu-core-0.12.2-r1.ebuild,
+  -files/kadu-core-0.12.2-fb-hotfix.patch:
+  Removed cruft.
+
+*kadu-core-0.12.3 (14 Sep 2012)
+
+  14 Sep 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.12.3.ebuild:
+  Bumped.
+
+*kadu-core-0.12.2-r1 (31 Aug 2012)
+
+  31 Aug 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.12.2-r1.ebuild,
+  +files/kadu-core-0.12.2-fb-hotfix.patch:
+  Rev-bumped with hotfix from upstream to fix data loss with FB account when
+  upgrading from 0.10.x-0.11.x.
+
+*kadu-core-0.12.2 (30 Aug 2012)
+
+  30 Aug 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.12.2.ebuild:
+  Bumped.
+
+*kadu-core-0.12.1 (25 Aug 2012)
+
+  25 Aug 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.12.1.ebuild:
+  Bumped.
+
+  26 Jun 2012; Michał Ziąbkowski <mziab@o2.pl> -kadu-core-0.10.0.ebuild,
+  -kadu-core-0.10.1.ebuild, -kadu-core-0.11.0.ebuild, -kadu-core-0.11.1.ebuild,
+  -kadu-core-0.11.2.ebuild, kadu-core-0.11.3.ebuild,
+  -kadu-core-0.12.0_rc1.ebuild:
+  Stabled Kadu-0.11.3 and plugins.
+
+  26 Jun 2012; Michał Ziąbkowski <mziab@o2.pl> -kadu-core-0.10.0.ebuild,
+  -kadu-core-0.10.1.ebuild, -kadu-core-0.11.0.ebuild, -kadu-core-0.11.1.ebuild,
+  -kadu-core-0.11.2.ebuild, -kadu-core-0.12.0_rc1.ebuild:
+  Removed obsoleted versions.
+
+  23 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-core-0.12.0_alpha1.ebuild, -kadu-core-0.12.0_alpha2.ebuild,
+  -kadu-core-0.12.0_alpha3.ebuild, -kadu-core-0.12.0_alpha4.ebuild,
+  -kadu-core-0.12.0_beta1.ebuild, -kadu-core-0.12.0_beta2.ebuild:
+  Removed cruft.
+
+*kadu-core-0.12.0 (16 Jun 2012)
+
+  16 Jun 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.12.0.ebuild:
+  Bumped.
+
+*kadu-core-0.12.0_rc1 (27 May 2012)
+
+  27 May 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.12.0_rc1.ebuild:
+  Bumped.
+
+*kadu-core-0.12.0_beta2 (15 May 2012)
+
+  15 May 2012; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.12.0_beta2.ebuild:
+  Bumped.
+
+*kadu-core-0.12.0_beta1 (30 Apr 2012)
+
+  30 Apr 2012; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.12.0_beta1.ebuild:
+  Bumped.
+
+*kadu-core-0.11.3 (28 Apr 2012)
+
+  28 Apr 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.11.3.ebuild:
+  Bumped.
+
+*kadu-core-0.11.2 (02 Apr 2012)
+
+  02 Apr 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.11.2.ebuild:
+  Bumped.
+
+*kadu-core-0.12.0_alpha4 (27 Mar 2012)
+
+  27 Mar 2012; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.12.0_alpha4.ebuild:
+  Bumped.
+
+*kadu-core-0.12.0_alpha3 (04 Mar 2012)
+
+  04 Mar 2012; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.12.0_alpha3.ebuild:
+  Bumped.
+
+*kadu-core-0.11.1 (25 Feb 2012)
+
+  25 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.11.1.ebuild:
+  Bumped.
+
+*kadu-core-0.12.0_alpha2 (19 Feb 2012)
+
+  19 Feb 2012; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.12.0_alpha2.ebuild:
+  Bumped.
+
+*kadu-core-0.12.0_alpha1 (11 Feb 2012)
+
+  11 Feb 2012; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.12.0_alpha1.ebuild:
+  Bumped.
+
+  04 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.11.0.ebuild:
+  Re-added keywords
+
+*kadu-core-0.11.0 (04 Feb 2012)
+
+  04 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.11.0.ebuild:
+  Bumped.
+
+  30 Jan 2012; Michał Ziąbkowski <mziab@o2.pl>
+  -files/kadu-core-0.11.0_beta1-cmake.patch,
+  -files/kadu-core-0.11.0_beta1-ntrack-linking.patch:
+  Purged old patches.
+
+  30 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> -kadu-core-0.9.2.ebuild:
+  Removed 0.9.*.
+
+  30 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.10.1.ebuild,
+  -kadu-core-0.11.0_beta1.ebuild, -kadu-core-0.11.0_beta1-r1.ebuild,
+  -kadu-core-0.11.0_beta2.ebuild:
+  Removed cruft.
+
+  30 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.10.1.ebuild,
+  -kadu-core-0.11.0_beta1.ebuild, -kadu-core-0.11.0_beta1-r1.ebuild,
+  -kadu-core-0.11.0_beta2.ebuild:
+  Removed cruft.
+
+  30 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.10.1.ebuild,
+  -kadu-core-0.11.0_beta1.ebuild, -kadu-core-0.11.0_beta1-r1.ebuild,
+  -kadu-core-0.11.0_beta2.ebuild:
+  Removed cruft.
+
+  30 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.10.1.ebuild:
+  Stabled.
+
+*kadu-core-0.11.0_rc3 (29 Jan 2012)
+
+  27 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.11.0_rc3.ebuild:
+  Bumped.
+
+*kadu-core-0.11.0_rc2 (16 Jan 2012)
+
+  16 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.11.0_rc2.ebuild:
+  Bumped.
+
+*kadu-core-0.11.0_rc1 (07 Jan 2012)
+
+  07 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.11.0_rc1.ebuild:
+  Bumped.
+
+*kadu-core-0.11.0_beta2 (30 Dec 2011)
+
+  30 Dec 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.11.0_beta2.ebuild:
+  Bumped.
+
+  28 Dec 2011; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-core-0.11.0_beta1-r1.ebuild:
+  Explicitly disable libindicate when USE=ayatana is unset.
+
+*kadu-core-0.11.0_beta1-r1 (28 Dec 2011)
+
+  28 Dec 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.11.0_beta1-r1.ebuild,
+  +files/kadu-core-0.11.0_beta1-ntrack-linking.patch:
+  Rev-bumped with upstream patch to fix ntrack linking.
+
+  26 Dec 2011; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.11.0_beta1.ebuild:
+  Fixed a possible bug in setting the network implementation.
+
+  21 Dec 2011; Michał Ziąbkowski <mziab@o2.pl>
+  -files/0.6.5.4-fix-double-free.patch, -files/0.6.5.4-gg_servers.patch,
+  -files/0.6.5.4-glibc-2.12.patch:
+  Removed stale patches.
+
+*kadu-core-0.11.0_beta1 (21 Dec 2011)
+
+  21 Dec 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.11.0_beta1.ebuild:
+  Bumped.
+
+*kadu-core-0.10.1 (18 Oct 2011)
+
+  18 Oct 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.10.1.ebuild:
+  Bumped.
+
+  13 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.10.0.ebuild:
+  Replaced sed magic with a cleaner approach.
+
+*kadu-core-0.10.0 (24 Aug 2011)
+
+  24 Aug 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.10.0.ebuild:
+  Bumped.
+
+*kadu-core-0.10.0_rc1 (02 Aug 2011)
+
+  02 Aug 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
+  +kadu-core-0.10.0_rc1.ebuild:
+  Bumped.
+
+*kadu-core-0.10.0_beta2 (11 Jul 2011)
+
+  11 Jul 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.10.0_beta2.ebuild:
+  Bumped.
+
+  28 Jun 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
+  kadu-core-0.10.0_beta1.ebuild:
+  Added qca depend.
+
+  27 Jun 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
+  kadu-core-0.10.0_beta1.ebuild:
+  Bumped.
+
+*kadu-core-0.10.0_beta1 (27 Jun 2011)
+
+  27 Jun 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
+  +kadu-core-0.10.0_beta1.ebuild:
+  Bumped.
+
+  30 May 2011; Michał Ziąbkowski <mziab@o2.pl> metadata.xml:
+  Added description for ntrack.
+
+*kadu-core-0.10.0_alpha1 (30 May 2011)
+
+  30 May 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.10.0_alpha1.ebuild:
+  Bumped.
+
+  09 May 2011; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.9.0.ebuild,
+  kadu-core-0.9.1.ebuild, kadu-core-0.9.2.ebuild:
+  Oops. Added missing qt-svg dep. Sorry, non-KDE users.
+
+*kadu-core-0.9.2 (08 May 2011)
+
+  08 May 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.9.2.ebuild:
+  Bumped.
+
+*kadu-core-0.9.1 (09 Apr 2011)
+
+  09 Apr 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.9.1.ebuild:
+  Bumped.
+
+*kadu-core-0.9.0 (19 Mar 2011)
+
+  19 Mar 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.9.0.ebuild:
+  Bumped.
+
+*kadu-core-0.6.6_rc4 (16 Mar 2011)
+
+  16 Mar 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.6.6_rc4.ebuild:
+  Bumped.
+
+*kadu-core-0.6.6_rc3 (12 Mar 2011)
+
+  12 Mar 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.6.6_rc3.ebuild:
+  Bumped.
+
+*kadu-core-0.6.5.5 (09 Mar 2011)
+
+  09 Mar 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.6.5.5.ebuild:
+  Bumped.
+
+*kadu-core-0.6.6_rc2 (05 Mar 2011)
+
+  05 Mar 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.6.6_rc2.ebuild:
+  Bumped.
+
+*kadu-core-0.6.6_rc1 (23 Feb 2011)
+
+  23 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.6.6_rc1.ebuild:
+  Bumped.
+
+*kadu-core-0.6.5.4-r3 (19 Feb 2011)
+
+  19 Feb 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +files/0.6.5.4-fix-double-free.patch, +kadu-core-0.6.5.4-r3.ebuild:
+  Rev-bumped 0.6.5.4 with crash fix.
+
+*kadu-core-0.6.6_beta17 (18 Feb 2011)
+
+  18 Feb 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.6_beta17.ebuild:
+  Bumped.
+
+*kadu-core-0.6.6_beta16 (17 Feb 2011)
+
+  17 Feb 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.6_beta16.ebuild:
+  Bumped.
+
+  07 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.6_beta15.ebuild:
+  qt-dbus is now required.
+
+  07 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.6_beta15.ebuild:
+  Bumped required Qt version.
+
+  06 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.5.4.ebuild,
+  kadu-core-0.6.5.4-r1.ebuild, kadu-core-0.6.5.4-r2.ebuild:
+  Made Kadu 0.6.5.4 use Gentoo mirrors for now.
+
+  06 Feb 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.6_beta15.ebuild:
+  Changed URI due to server problems.
+
+*kadu-core-0.6.6_beta15 (06 Feb 2011)
+
+  06 Feb 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.6_beta15.ebuild:
+  Bumped.
+
+*kadu-core-0.6.6_beta14_p2 (04 Jan 2011)
+
+  04 Jan 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.6_beta14_p2.ebuild:
+  Bumped.
+
+*kadu-core-0.6.6_beta14 (04 Jan 2011)
+
+  04 Jan 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.6_beta14.ebuild:
+  Bumped.
+
+*kadu-core-0.6.6_beta13 (22 Dec 2010)
+
+  22 Dec 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.6_beta13.ebuild:
+  Bumped.
+
+*kadu-core-0.6.6_beta12 (07 Dec 2010)
+
+  07 Dec 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.6_beta12.ebuild:
+  Bumped.
+
+*kadu-core-0.6.6_beta11 (22 Nov 2010)
+
+  22 Nov 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.6_beta11.ebuild:
+  Bumped.
+
+*kadu-core-0.6.6_beta10 (08 Nov 2010)
+
+  08 Nov 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.6_beta10.ebuild:
+  Bumped.
+
+*kadu-core-0.6.6_beta9 (26 Oct 2010)
+
+  26 Oct 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.6_beta9.ebuild:
+  Bumped.
+
+*kadu-core-0.6.6_beta8 (12 Oct 2010)
+
+  12 Oct 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.6_beta8.ebuild:
+  Bumped.
+
+*kadu-core-0.6.6_beta7 (15 Sep 2010)
+
+  15 Sep 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.6_beta7.ebuild:
+  Bumped.
+
+*kadu-core-0.6.6_beta6 (31 Aug 2010)
+
+  31 Aug 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.6_beta6.ebuild:
+  Bumped.
+
+  22 Aug 2010; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-core-0.6.5.4-r2.ebuild:
+  Fixed typo.
+
+  22 Aug 2010; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-core-0.6.5.4-r1.ebuild:
+  Stabled -r1 with patched server list.
+
+*kadu-core-0.6.5.4-r2 (22 Aug 2010)
+
+  22 Aug 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.5.4-r2.ebuild, +files/0.6.5.4-glibc-2.12.patch:
+  Bumped with patch to hopefully fix an issue with glibc 2.12 and openssl
+  1.0 reported by shade.
+
+*kadu-core-0.6.6_beta5 (16 Aug 2010)
+
+  16 Aug 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.6_beta5.ebuild:
+  Bumped.
+
+*kadu-core-0.6.6_beta4 (25 Jul 2010)
+
+  25 Jul 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.6_beta4.ebuild:
+  Bumped.
+
+*kadu-core-0.6.6_beta3 (07 Jul 2010)
+
+  07 Jul 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.6_beta3.ebuild:
+  Bumped.
+
+*kadu-core-0.6.5.4-r1 (25 May 2010)
+
+  25 May 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.5.4-r1.ebuild, +files/0.6.5.4-gg_servers.patch:
+  Bumped 0.6.5.4 with server list patch.
+
+*kadu-core-0.6.5.4 (08 Feb 2010)
+
+  08 Feb 2010; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.6.5.4.ebuild:
+  Bumped to Kadu 0.6.5.4.
+
+*kadu-core-0.6.5.4_rc3-r1 (24 Jan 2010)
+
+  24 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.5.4_rc3-r1.ebuild, +files/search-items.patch:
+  Rev-bumped with fix for searching.
+
+  16 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-core-0.6.5.4_rc1.ebuild:
+  Removed Kadu 0.6.5.4_rc1.
+
+*kadu-core-0.6.5.4_rc2 (01 Jan 2010)
+
+  01 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.5.4_rc2.ebuild:
+  Bumped.
+
+  21 Dec 2009; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-core-0.6.5.4_rc1.ebuild:
+  Bump libgadu dep to 1.9.0_rc2 to avoid trouble.
+
+  16 Dec 2009; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.5.3.ebuild,
+  kadu-core-0.6.5.4_rc1.ebuild:
+  Change USE dep just in case.
+
+  11 Dec 2009; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.5.4_rc1.ebuild:
+  Bumped.
+
+  04 Oct 2009; Michał Ziąbkowski <mziab@o2.pl> -kadu-core-0.6.0.3.ebuild,
+  -files/kill-strip.patch, -files/misc_opts.patch:
+  Removing Kadu 0.6.0.* ebuilds.
+
+  14 Sep 2009; Michał Ziąbkowski <mziab@o2.pl> -kadu-core-0.6.5.2.ebuild,
+  -files/kadu-core-qt45-fix.patch, -files/kadu-gcc44.patch,
+  +kadu-core-0.6.5.3.ebuild:
+  Bumped.
+
+  25 May 2009; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.5.2.ebuild:
+  Require qt-gui[dbus] just in case of an odd-ball flag configuration.
+
+  13 May 2009; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.5.2.ebuild,
+  +files/kadu-gcc44.patch:
+  Added gcc4.4 patch.
+
+  03 May 2009; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-core-0.6.5.1-r3.ebuild, +kadu-core-0.6.5.2.ebuild:
+  Bumped. Removed previous version.
+
+  07 Mar 2009; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-core-0.6.5.1-r2.ebuild, +kadu-core-0.6.5.1-r3.ebuild,
+  -files/kadu-core-0.6.5.1-const.patch:
+  Some clean-up, since the build problem was fixed elsewhere.
+
+  01 Mar 2009; Michał Ziąbkowski <mziab@o2.pl> -kadu-core-0.6.5.1.ebuild,
+  -kadu-core-0.6.5.1-r1.ebuild:
+  Removed cruft.
+
+  28 Feb 2009; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.5.1-r2.ebuild, +files/kadu-core-0.6.5.1-const.patch:
+  Added patch to fix issues with GCC 4.3 and Qt 4.5 that some people were having.
+
+  19 Feb 2009; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.5.1-r1.ebuild,
+  -files/kadu-core-fix-sound-install-path.patch,
+  +files/kadu-core-qt45-fix.patch:
+  Added fix for input on Qt 4.5.
+
+  08 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.0.3.ebuild,
+  +files/kill-strip.patch:
+  Added strip patch from portage and readjusted the deps again.
+
+  08 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.0.3.ebuild:
+  Proper port to EAPI=2.
+
+  08 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.0.3.ebuild:
+  Removed EAPI=2. It was breaking compile.
+
+  07 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.0.3.ebuild:
+  Always use system-wide libgadu.
+
+  25 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.0.3.ebuild,
+  -kadu-core-0.6.5.ebuild, +kadu-core-0.6.5.1.ebuild, +metadata.xml:
+  Bumped. Removed previous version. Some repoman fixes.
+
+  01 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> -kadu-core-0.6.0.2.ebuild,
+  +kadu-core-0.6.0.3.ebuild:
+  Bumped. Removed previous version.
+
+  08 Dec 2008; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-core-0.6.5_rc2.ebuild, +kadu-core-0.6.5.ebuild:
+  Bumped. Removed previous version.
+
+  08 Dec 2008; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-core-0.6.5_rc1-r1.ebuild:
+  Removed cruft.
+
+  12 Nov 2008; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.5_rc2.ebuild:
+  Bumped.
+
+  17 Oct 2008; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.5_rc1.ebuild,
+  kadu-core-0.6.5_rc1-r1.ebuild:
+  Removed some cruft.
+
+  17 Oct 2008; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.5_rc1-r1.ebuild,
+  +files/kadu-core-fix-sound-install-path.patch:
+  Added patch to fix sounds install.
+
+  07 Aug 2008; Michał Ziąbkowski <mziab@o2.pl> -kadu-core-0.6.0.1.ebuild:
+  Removed cruft.
+
+  07 Aug 2008; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.0.1.ebuild,
+  kadu-core-0.6.0.2.ebuild:
+  Added "--missing true" to USE gif check , so that it doesn't bomb out with
+  qt-3.3.8b.
+
+  03 Jul 2008; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.6.0.2.ebuild:
+  Bumped.
+
+  23 May 2008; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.0.1.ebuild:
+  Changed some logic, so that the build doesn't bomb out during emerge -e world.
+
+  20 May 2008; Michał Ziąbkowski <mziab@o2.pl> -kadu-core-0.6.0.ebuild,
+  -kadu-core-0.6.0-r1.ebuild:
+  Removed cruft.
+
+  05 May 2008; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.6.0.1.ebuild:
+  Bumped.
+
+  13 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.0-r1.ebuild:
+  Seems to work just fine, so I'm adding the keywords back.
+
+  12 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.0-r1.ebuild:
+  Actually, I think it's better to bump libgadu and use it. Uncommented some
+  code. Added a blocker for <net-libs/libgadu-1.8.0. Masked the new ebuild
+  just in case.
+
+  12 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.6.0-r1.ebuild:
+  Add blocker for libgadu due to some file collisions
+
