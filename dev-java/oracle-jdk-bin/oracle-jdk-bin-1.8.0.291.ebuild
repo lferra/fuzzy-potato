@@ -1,11 +1,12 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-inherit desktop gnome2-utils java-vm-2 prefix versionator
+inherit desktop eutils gnome2-utils java-vm-2 prefix versionator
 
 KEYWORDS="-* amd64 ~arm ~arm64 x86 ~amd64-linux ~x86-linux ~x64-macos ~sparc64-solaris ~x64-solaris"
+KEYWORDS="-* amd64"
 
 if [[ "$(get_version_component_range 4)" == 0 ]] ; then
 	S_PV="$(get_version_component_range 1-3)"
@@ -41,11 +42,11 @@ done
 
 DESCRIPTION="Oracle's Java SE Development Kit"
 HOMEPAGE="http://www.oracle.com/technetwork/java/javase/"
-LICENSE="Oracle-BCLA-JavaSE examples? ( BSD )"
+LICENSE="OTN examples? ( BSD )"
 SLOT="1.8"
 IUSE="alsa commercial cups doc examples +fontconfig headless-awt javafx jce nsplugin selinux source visualvm"
 REQUIRED_USE="javafx? ( alsa fontconfig )"
-RESTRICT="fetch preserve-libs strip"
+RESTRICT="bindist fetch preserve-libs strip"
 QA_PREBUILT="*"
 
 # NOTES:
