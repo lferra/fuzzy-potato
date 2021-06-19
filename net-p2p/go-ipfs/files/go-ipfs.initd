@@ -1,0 +1,26 @@
+#!/sbin/openrc-run
+# Copyright 1999-2018 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+IPFS_PATH="${IPFS_PATH:-/var/lib/go-ipfs/.ipfs}"
+
+command="/usr/bin/ipfs"
+command_args="daemon --enable-gc --migrate"
+command_user="${command_user:-go-ipfs:go-ipfs}"
+command_background=yes
+pidfile="/run/${RC_SVCNAME}.pid"
+retry="${retry:-TERM/20/KILL/5}"
+start_stop_daemon_args="${SSD_OPTS:--w 1000}
+	-e \"IPFS_PATH=${IPFS_PATH}\""
+
+depend() {
+	need net
+}
+
+stop() {
+	ebegin "Stopping ${RC_SVCNAME}"
+	start-stop-daemon --stop --exec "${command}" \
+		--pidfile "${pidfile}" --retry "${retry}" \
+		-- shutdown
+	eend $?
+}

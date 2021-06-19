@@ -1,0 +1,3 @@
+# config file for /etc/init.d/go-ipfs
+
+IPFS_PATH="/var/lib/go-ipfs/.ipfs"
