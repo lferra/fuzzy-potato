@@ -6,7 +6,7 @@ EAPI=7
 
 SRC_URI="https://github.com/Sabayon/genkernel-next/archive/v${PV}.tar.gz -> ${P}.tar.gz
          https://www.busybox.net/downloads/busybox-1.32.0.tar.bz2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 x86"
 inherit bash-completion-r1
 
 DESCRIPTION="Gentoo automatic kernel building scripts, reloaded"
@@ -46,6 +46,14 @@ src_prepare() {
 	default
 	sed -i "/^GK_V=/ s:GK_V=.*:GK_V=${PV}:g" "${S}/genkernel" || \
 		die "Could not setup release"
+
+	# Get the real location of 'DISTDIR'
+	portage_distdir=$(dirname `readlink "${DISTDIR}"/${P}.tar.gz`)
+
+	# Replace the busybox path from the patch with the real 'DISTDIR' path
+	# that is set in '/etc/portage/make.conf'
+	sed -i 's:'"/usr/portage/distfiles"':'"${portage_distdir}"':g' "${S}/genkernel.conf" || \
+		die "Failed to update busybox location"
 }
 
 src_install() {
