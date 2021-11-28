@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI="5"
+EAPI="6"
 
 inherit eutils java-vm-2 prefix versionator
 
@@ -10,9 +10,9 @@ inherit eutils java-vm-2 prefix versionator
 JDK_URI="http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html"
 JCE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jce-6-download-429243.html"
 # This is a list of archs supported by this update. Currently ia64 comes and goes ...
-AT_AVAILABLE=( amd64 ia64 x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris )
+AT_AVAILABLE=( amd64 x86 )
 # somtimes the demos are missing
-DEMOS_AVAILABLE=( amd64 ia64 x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris )
+DEMOS_AVAILABLE=( amd64 x86 )
 
 MY_PV="$(get_version_component_range 2)u$(get_version_component_range 4)"
 S_PV="$(replace_version_separator 3 '_')"
