@@ -27,7 +27,7 @@ SHPV="${PV/_p*/}"
 
 # https://gitlab.com/alfredchen/projectc/ revision for a major version,
 # e.g. prjc-v5.14-r2 = 2
-PRJC_R=4
+PRJC_R=5
 
 inherit kernel-2 optfeature
 detect_version
@@ -39,7 +39,7 @@ SRC_URI="${KERNEL_URI}
 	https://github.com/pfactum/pf-kernel/compare/v${SHPV}...v${SHPV}-pf${PV/*_p/}.diff -> ${P}.patch
 	https://dev.gentoo.org/~mpagano/genpatches/tarballs/genpatches-${SHPV}-${K_GENPATCHES_VER}.base.tar.xz
 	https://dev.gentoo.org/~mpagano/genpatches/tarballs/genpatches-${SHPV}-${K_GENPATCHES_VER}.extras.tar.xz
-	https://dev.gentoo.org/~juippis/patches/pf-sources/${SHPV}/prjc-v${SHPV}-${PRJC_R}uo.patch
+	https://raw.githubusercontent.com/sirlucjan/kernel-patches/master/${SHPV}/prjc-patches-v${PRJC_R}/0001-PRJC-for-5.16.patch -> prjc-v${SHPV}-${PRJC_R}uo.patch
 	https://dev.gentoo.org/~mpagano/genpatches/trunk/5.15/5021_BMQ-and-PDS-gentoo-defaults.patch -> 5021_BMQ-and-PDS-gentoo-defaults-5.15.patch"
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
