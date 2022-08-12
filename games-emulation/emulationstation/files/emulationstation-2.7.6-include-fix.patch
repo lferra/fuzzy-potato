@@ -1,0 +1,135 @@
+diff '--color=auto' -Naur EmulationStation-2.7.6_orig/es-app/src/CollectionSystemManager.cpp EmulationStation-2.7.6/es-app/src/CollectionSystemManager.cpp
+--- EmulationStation-2.7.6_orig/es-app/src/CollectionSystemManager.cpp	2019-08-25 16:29:17.776813950 -0300
++++ EmulationStation-2.7.6/es-app/src/CollectionSystemManager.cpp	2019-08-25 16:43:27.050165306 -0300
+@@ -13,7 +13,7 @@
+ #include <boost/algorithm/string/predicate.hpp>
+ #include <boost/filesystem/operations.hpp>
+ #include <boost/xpressive/xpressive.hpp>
+-#include <pugixml/src/pugixml.hpp>
++#include <pugixml.hpp>
+ #include <fstream>
+ #include <unordered_map>
+ 
+@@ -1023,4 +1023,4 @@
+ 	transform(name1.cbegin(), name1.cend(), name1.begin(), ::toupper);
+ 	transform(name2.cbegin(), name2.cend(), name2.begin(), ::toupper);
+ 	return name1.compare(name2) < 0;
+-}
+\ No newline at end of file
++}
+diff '--color=auto' -Naur EmulationStation-2.7.6_orig/es-app/src/Gamelist.cpp EmulationStation-2.7.6/es-app/src/Gamelist.cpp
+--- EmulationStation-2.7.6_orig/es-app/src/Gamelist.cpp	2019-08-25 16:29:17.776813950 -0300
++++ EmulationStation-2.7.6/es-app/src/Gamelist.cpp	2019-08-25 16:42:33.163497517 -0300
+@@ -8,7 +8,7 @@
+ #include "Util.h"
+ #include <boost/filesystem/operations.hpp>
+ #include <boost/filesystem/path.hpp>
+-#include <pugixml/src/pugixml.hpp>
++#include <pugixml.hpp>
+ 
+ namespace fs = boost::filesystem;
+ 
+diff '--color=auto' -Naur EmulationStation-2.7.6_orig/es-app/src/MetaData.cpp EmulationStation-2.7.6/es-app/src/MetaData.cpp
+--- EmulationStation-2.7.6_orig/es-app/src/MetaData.cpp	2019-08-25 16:29:17.776813950 -0300
++++ EmulationStation-2.7.6/es-app/src/MetaData.cpp	2019-08-25 16:41:31.730162867 -0300
+@@ -3,7 +3,7 @@
+ #include "Log.h"
+ #include "Util.h"
+ #include <boost/date_time/posix_time/time_formatters.hpp>
+-#include <pugixml/src/pugixml.hpp>
++#include <pugixml.hpp>
+ 
+ namespace fs = boost::filesystem;
+ 
+diff '--color=auto' -Naur EmulationStation-2.7.6_orig/es-app/src/scrapers/GamesDBScraper.cpp EmulationStation-2.7.6/es-app/src/scrapers/GamesDBScraper.cpp
+--- EmulationStation-2.7.6_orig/es-app/src/scrapers/GamesDBScraper.cpp	2019-08-25 16:29:17.780147284 -0300
++++ EmulationStation-2.7.6/es-app/src/scrapers/GamesDBScraper.cpp	2019-08-25 16:44:31.410166688 -0300
+@@ -6,7 +6,7 @@
+ #include "Settings.h"
+ #include "SystemData.h"
+ #include "Util.h"
+-#include <pugixml/src/pugixml.hpp>
++#include <pugixml.hpp>
+ 
+ using namespace PlatformIds;
+ const std::map<PlatformId, const char*> gamesdb_platformid_map {
+diff '--color=auto' -Naur EmulationStation-2.7.6_orig/es-app/src/SystemData.cpp EmulationStation-2.7.6/es-app/src/SystemData.cpp
+--- EmulationStation-2.7.6_orig/es-app/src/SystemData.cpp	2019-08-25 16:29:17.776813950 -0300
++++ EmulationStation-2.7.6/es-app/src/SystemData.cpp	2019-08-25 16:40:19.146827991 -0300
+@@ -9,7 +9,7 @@
+ #include "Settings.h"
+ #include "ThemeData.h"
+ #include <boost/filesystem/operations.hpp>
+-#include <pugixml/src/pugixml.hpp>
++#include <pugixml.hpp>
+ #include <fstream>
+ #ifdef WIN32
+ #include <Windows.h>
+diff '--color=auto' -Naur EmulationStation-2.7.6_orig/es-app/src/SystemScreenSaver.cpp EmulationStation-2.7.6/es-app/src/SystemScreenSaver.cpp
+--- EmulationStation-2.7.6_orig/es-app/src/SystemScreenSaver.cpp	2019-08-25 16:29:17.780147284 -0300
++++ EmulationStation-2.7.6/es-app/src/SystemScreenSaver.cpp	2019-08-25 16:42:46.170164460 -0300
+@@ -15,7 +15,7 @@
+ #include "SystemData.h"
+ #include "Util.h"
+ #include <boost/filesystem/operations.hpp>
+-#include <pugixml/src/pugixml.hpp>
++#include <pugixml.hpp>
+ #include <unordered_map>
+ 
+ #define FADE_TIME 			300
+diff '--color=auto' -Naur EmulationStation-2.7.6_orig/es-core/src/InputConfig.cpp EmulationStation-2.7.6/es-core/src/InputConfig.cpp
+--- EmulationStation-2.7.6_orig/es-core/src/InputConfig.cpp	2019-08-25 16:29:17.783480617 -0300
++++ EmulationStation-2.7.6/es-core/src/InputConfig.cpp	2019-08-25 16:37:02.900157181 -0300
+@@ -1,7 +1,7 @@
+ #include "InputConfig.h"
+ 
+ #include "Log.h"
+-#include <pugixml/src/pugixml.hpp>
++#include <pugixml.hpp>
+ 
+ //some util functions
+ std::string inputTypeToString(InputType type)
+diff '--color=auto' -Naur EmulationStation-2.7.6_orig/es-core/src/InputManager.cpp EmulationStation-2.7.6/es-core/src/InputManager.cpp
+--- EmulationStation-2.7.6_orig/es-core/src/InputManager.cpp	2019-08-25 16:29:17.783480617 -0300
++++ EmulationStation-2.7.6/es-core/src/InputManager.cpp	2019-08-25 16:36:05.140155956 -0300
+@@ -5,7 +5,7 @@
+ #include "platform.h"
+ #include "Window.h"
+ #include <boost/filesystem/operations.hpp>
+-#include <pugixml/src/pugixml.hpp>
++#include <pugixml.hpp>
+ #include <SDL.h>
+ #include <iostream>
+ 
+diff '--color=auto' -Naur EmulationStation-2.7.6_orig/es-core/src/Settings.cpp EmulationStation-2.7.6/es-core/src/Settings.cpp
+--- EmulationStation-2.7.6_orig/es-core/src/Settings.cpp	2019-08-25 16:29:17.783480617 -0300
++++ EmulationStation-2.7.6/es-core/src/Settings.cpp	2019-08-25 16:32:23.716817924 -0300
+@@ -3,7 +3,7 @@
+ #include "Log.h"
+ #include "platform.h"
+ #include <boost/filesystem/operations.hpp>
+-#include <pugixml/src/pugixml.hpp>
++#include <pugixml.hpp>
+ 
+ Settings* Settings::sInstance = NULL;
+ 
+diff '--color=auto' -Naur EmulationStation-2.7.6_orig/es-core/src/ThemeData.cpp EmulationStation-2.7.6/es-core/src/ThemeData.cpp
+--- EmulationStation-2.7.6_orig/es-core/src/ThemeData.cpp	2019-08-25 16:29:17.783480617 -0300
++++ EmulationStation-2.7.6/es-core/src/ThemeData.cpp	2019-08-25 16:37:40.923491311 -0300
+@@ -7,7 +7,7 @@
+ #include "Settings.h"
+ #include <boost/filesystem/operations.hpp>
+ #include <boost/xpressive/xpressive_static.hpp>
+-#include <pugixml/src/pugixml.hpp>
++#include <pugixml.hpp>
+ 
+ std::vector<std::string> ThemeData::sSupportedViews { { "system" }, { "basic" }, { "detailed" }, { "video" } };
+ std::vector<std::string> ThemeData::sSupportedFeatures { { "video" }, { "carousel" }, { "z-index" } };
+diff '--color=auto' -Naur EmulationStation-2.7.6_orig/external/CMakeLists.txt EmulationStation-2.7.6/external/CMakeLists.txt
+--- EmulationStation-2.7.6_orig/external/CMakeLists.txt	2019-08-25 16:29:17.786813950 -0300
++++ EmulationStation-2.7.6/external/CMakeLists.txt	2019-08-25 16:32:55.396818607 -0300
+@@ -2,4 +2,3 @@
+ # package managers are included with the project (in the 'external' folder)
+ 
+ add_subdirectory("nanosvg")
+-add_subdirectory("pugixml")
