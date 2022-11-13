@@ -1,7 +1,7 @@
 No point in adding qt-related things to the compile line unless the qt debugger is wanted
 
---- scripts/src/osd/sdl_cfg.lua.orig
-+++ scripts/src/osd/sdl_cfg.lua
+--- 1/scripts/src/osd/sdl_cfg.lua.orig
++++ 2/scripts/src/osd/sdl_cfg.lua
 @@ -115,14 +115,16 @@
  	configuration { }
  
