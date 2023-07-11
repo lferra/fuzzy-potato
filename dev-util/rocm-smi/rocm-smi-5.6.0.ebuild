@@ -30,7 +30,7 @@ RDEPEND="${PYTHON_DEPS}"
 BDEPEND=""
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-5.0.2-gcc12-memcpy.patch
+	#"${FILESDIR}"/${PN}-5.0.2-gcc12-memcpy.patch
 	"${FILESDIR}"/${PN}-5.4.2-detect-builtin-amdgpu.patch
 )
 
