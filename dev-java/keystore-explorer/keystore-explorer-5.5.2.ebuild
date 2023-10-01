@@ -1,42 +1,33 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
-EAPI=6
+EAPI=7
 
-inherit eutils versionator
+inherit desktop java-pkg-2
 
-MY_PV=$(replace_all_version_separators '')
+MY_PV=$(ver_rs 1- '')
 
-DESCRIPTION="Keystore management tool."
-SRC_URI="mirror://sourceforge/keystore-explorer/v${PV}/kse-${MY_PV}.zip"
-HOMEPAGE="http://keystore-explorer.sourceforge.net"
+DESCRIPTION="Java key-store management tool."
+SRC_URI="https://github.com/kaikramer/${PN}/releases/download/v${PV}/kse-${MY_PV}.zip"
+HOMEPAGE="http://keystore-explorer.org https://github.com/kaikramer/keystore-explorer"
 
-KEYWORDS="~amd64 ~x86"
-SLOT="0"
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 IUSE=""
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
 
-DEPEND="app-arch/unzip"
-RDEPEND="dev-java/java-config
-    || ( >=dev-java/oracle-jdk-bin-1.6 >=dev-java/oracle-jre-bin-1.6 )"
+DEPEND=">=virtual/jdk-1.8"
+RDEPEND=""
 
 S="${WORKDIR}/kse-${MY_PV}"
 
-src_unpack() {
-    unpack ${A}
-    rm -v "$S/kse.exe" || die
-}
 src_install() {
-	local dir="/opt/${PN}"
-	local exe="kse"
-
-	dobin  "${FILESDIR}/kse"
-
-	insinto "${dir}" || die
-	doins -r * || die
-	fperms 755 "${dir}/kse.sh" || die
-
-	newicon "icons/kse_128.png" "${exe}.png" || die
-	make_desktop_entry "${exe}" "Keystore Explorer" "${exe}" "Development" || die
+	dodoc readme.txt
+	java-pkg_jarinto /usr/share/${PN}
+	java-pkg_dojar kse.jar
+	java-pkg_jarinto /usr/share/${PN}/lib
+	java-pkg_dojar lib/*.jar
+	java-pkg_dolauncher "${PN}" --jar kse.jar
+	newicon "icons/kse_128.png" "${PN}.png"
+	make_desktop_entry "${PN}" "${PN}" "${PN}"
 }
