@@ -28,7 +28,7 @@ RDEPEND="
 	sci-libs/gsl:=
 	joystick? ( dev-qt/qtgamepad:5 )
 	opencl? (
-		dev-libs/clhpp
+		dev-cpp/clhpp
 		virtual/opencl
 	)
 	openexr? (
