@@ -23,10 +23,10 @@ RDEPEND="
 	${DEPEND}
 "
 
-PATCHES=(
-	"${FILESDIR}/${PN}-3.0.1-desktop_rename.patch"
-	"${FILESDIR}/${PN}-3.1.0-musl-fix-execinfo.patch"
-)
+#PATCHES=(
+#	"${FILESDIR}/${PN}-3.0.1-desktop_rename.patch"
+#	"${FILESDIR}/${PN}-3.1.0-musl-fix-execinfo.patch"
+#)
 
 src_install() {
 	cmake_src_install
