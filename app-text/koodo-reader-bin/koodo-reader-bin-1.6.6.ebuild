@@ -1,12 +1,12 @@
 # Copyright 2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit rpm xdg
 DESCRIPTION="A modern ebook manager and reader with sync and backup capacities"
 HOMEPAGE="https://koodo.960960.xyz/"
-SRC_URI="https://github.com/troyeguo/koodo-reader/releases/download/v${PV}/Koodo.Reader-${PV}.rpm"
+SRC_URI="https://github.com/troyeguo/koodo-reader/releases/download/v${PV}/Koodo.Reader-${PV}-x86_64.rpm"
 S="${WORKDIR}"
 
 LICENSE="AGPL-3"
@@ -19,9 +19,7 @@ DEPEND="
 	x11-libs/libXfixes
 	x11-libs/libXrandr
 	media-libs/alsa-lib
-	dev-libs/atk
-	app-accessibility/at-spi2-atk
-	app-accessibility/at-spi2-core
+	>=app-accessibility/at-spi2-core-2.46.0
 	net-print/cups
 	x11-libs/libdrm
 	media-libs/mesa
