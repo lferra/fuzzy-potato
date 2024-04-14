@@ -52,7 +52,7 @@ CRATES="
 	fastrand@2.0.0
 	filetime@0.2.22
 	form_urlencoded@1.0.1
-	git2@0.18.2
+	git2@0.18.3
 	glob@0.3.1
 	half@1.8.2
 	hashbrown@0.14.2
