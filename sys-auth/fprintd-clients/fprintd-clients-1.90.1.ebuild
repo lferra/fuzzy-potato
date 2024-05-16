@@ -39,7 +39,7 @@ BDEPEND="
 		dev-util/gtk-doc
 	)
 	test? (
-		dev-python/dbusmock
+		dev-python/python-dbusmock
 		dev-python/dbus-python
 		dev-python/pycairo
 		pam? ( sys-libs/pam_wrapper )
