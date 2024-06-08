@@ -21,8 +21,8 @@ RDEPEND="|| ( >=virtual/jre-1.5 >=virtual/jdk-1.5 )"
 
 src_compile() {
 	mv "net.sf.portecle.desktop" "${PN}.desktop"
-	#sed -e  "/^Icon=/s/${PN}/${PN}.svg/" -i "${PN}.desktop"
-	#cp icons/svg/portecle.svg .
+	sed -e  "/^Icon=/s/${PN}/${PN}.svg/" -i "${PN}.desktop"
+	cp icons/svg/portecle.svg .
 }
 
 src_install() {
