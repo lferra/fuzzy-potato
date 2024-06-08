@@ -4,7 +4,7 @@
 
 EAPI="6"
 
-inherit java-pkg-2
+inherit desktop java-pkg-2
 
 DESCRIPTION="Keystore management tool."
 SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
@@ -32,7 +32,7 @@ src_install() {
 
 	dodoc *.txt
 
-	#doicon "${PN}.svg"
+	doicon "${PN}.svg"
 
 	local i
 	for i in 16x16 32x32 64x64 96x96 128x128; do
