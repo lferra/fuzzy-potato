@@ -4,7 +4,7 @@
 
 EAPI="6"
 
-inherit eutils java-pkg-2
+inherit java-pkg-2
 
 DESCRIPTION="Keystore management tool."
 SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
