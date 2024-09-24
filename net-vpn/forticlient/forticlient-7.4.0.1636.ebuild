@@ -110,12 +110,6 @@ src_install() {
 	insinto /opt/forticlient/gui/FortiClient-linux-x64
 	doins -r opt/forticlient/gui/FortiClient-linux-x64/.
 
-	insinto /opt/forticlient/vcm_sig
-	doins opt/forticlient/vcm_sig/vulns.dat
-
-	insinto /opt/forticlient/vir_sig
-	doins opt/forticlient/vir_sig/vir_high
-
 	fperms +x /opt/forticlient/gui/FortiClient-linux-x64/swiftshader/libEGL.so \
 		/opt/forticlient/gui/FortiClient-linux-x64/swiftshader/libGLESv2.so \
 		/opt/forticlient/gui/FortiClient-linux-x64/FortiClient \
