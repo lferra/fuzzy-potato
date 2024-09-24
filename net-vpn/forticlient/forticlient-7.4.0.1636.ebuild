@@ -53,20 +53,10 @@ QA_PREBUILT="opt/forticlient/fortitraylauncher
 	opt/forticlient/update
 	opt/forticlient/fctsched
 	opt/forticlient/fortivpn
-	opt/forticlient/scanunit
-	opt/forticlient/fazlogupload
-	opt/forticlient/vulscan
-	opt/forticlient/update_tls
 	opt/forticlient/fortitray
 	opt/forticlient/confighandler
-	opt/forticlient/vpn
-	opt/forticlient/epctrl
-	opt/forticlient/libav.so
-	opt/forticlient/fmon
-	opt/forticlient/fchelper"
+	opt/forticlient/vpn"
 QA_FLAGS_IGNORED="opt/forticlient/forticlient-cli
-	opt/forticlient/libvcm.so
-	opt/forticlient/ztproxy
 	opt/forticlient/gui/FortiClient-linux-x64/libEGL.so
 	opt/forticlient/gui/FortiClient-linux-x64/libvulkan.so
 	opt/forticlient/gui/FortiClient-linux-x64/libvk_swiftshader.so
