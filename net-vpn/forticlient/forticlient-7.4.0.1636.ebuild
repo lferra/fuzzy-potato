@@ -93,23 +93,13 @@ src_install() {
 
 	exeinto /opt/forticlient
 	doexe opt/forticlient/confighandler \
-		opt/forticlient/epctrl \
-		opt/forticlient/fazlogupload \
-		opt/forticlient/fchelper \
 		opt/forticlient/fctsched \
-		opt/forticlient/fmon \
 		opt/forticlient/forticlient-cli \
 		opt/forticlient/fortitray \
 		opt/forticlient/fortitraylauncher \
 		opt/forticlient/fortivpn \
 		opt/forticlient/vpn \
-		opt/forticlient/libav.so \
-		opt/forticlient/libvcm.so \
-		opt/forticlient/scanunit \
-		opt/forticlient/update \
-		opt/forticlient/update_tls \
-		opt/forticlient/vulscan \
-		opt/forticlient/ztproxy
+		opt/forticlient/update
 
 	insinto /opt/forticlient
 	doins opt/forticlient/.config.db.init
