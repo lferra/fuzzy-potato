@@ -58,7 +58,7 @@ QA_PREBUILT="opt/forticlient/fortitraylauncher
 	opt/forticlient/vpn"
 QA_FLAGS_IGNORED="opt/forticlient/forticlient-cli
 	opt/forticlient/gui/FortiClient-linux-x64/libEGL.so
-	opt/forticlient/gui/FortiClient-linux-x64/libvulkan.so
+	opt/forticlient/gui/FortiClient-linux-x64/libvulkan.so.1
 	opt/forticlient/gui/FortiClient-linux-x64/libvk_swiftshader.so
 	opt/forticlient/gui/FortiClient-linux-x64/chrome-sandbox
 	opt/forticlient/gui/FortiClient-linux-x64/FortiClient
@@ -66,8 +66,8 @@ QA_FLAGS_IGNORED="opt/forticlient/forticlient-cli
 	opt/forticlient/gui/FortiClient-linux-x64/libffmpeg.so
 	opt/forticlient/gui/FortiClient-linux-x64/FortiClient
 	opt/forticlient/gui/FortiClient-linux-x64/libffmpeg.so
-	opt/forticlient/gui/FortiClient-linux-x64/swiftshader/libEGL.so
-	opt/forticlient/gui/FortiClient-linux-x64/swiftshader/libGLESv2.so"
+	opt/forticlient/gui/FortiClient-linux-x64/libEGL.so
+	opt/forticlient/gui/FortiClient-linux-x64/libGLESv2.so"
 
 S="${WORKDIR}"
 
@@ -110,15 +110,15 @@ src_install() {
 	insinto /opt/forticlient/gui/FortiClient-linux-x64
 	doins -r opt/forticlient/gui/FortiClient-linux-x64/.
 
-	fperms +x /opt/forticlient/gui/FortiClient-linux-x64/swiftshader/libEGL.so \
-		/opt/forticlient/gui/FortiClient-linux-x64/swiftshader/libGLESv2.so \
+	fperms +x /opt/forticlient/gui/FortiClient-linux-x64/libEGL.so \
+		/opt/forticlient/gui/FortiClient-linux-x64/libGLESv2.so \
 		/opt/forticlient/gui/FortiClient-linux-x64/FortiClient \
 		/opt/forticlient/gui/FortiClient-linux-x64/chrome-sandbox \
 		/opt/forticlient/gui/FortiClient-linux-x64/libEGL.so \
 		/opt/forticlient/gui/FortiClient-linux-x64/libGLESv2.so \
 		/opt/forticlient/gui/FortiClient-linux-x64/libffmpeg.so \
 		/opt/forticlient/gui/FortiClient-linux-x64/libvk_swiftshader.so \
-		/opt/forticlient/gui/FortiClient-linux-x64/libvulkan.so
+		/opt/forticlient/gui/FortiClient-linux-x64/libvulkan.so.1
 
 	dodir /opt/bin
 	dosym ../forticlient/gui/FortiClient-linux-x64/FortiClient opt/bin/FortiClient
