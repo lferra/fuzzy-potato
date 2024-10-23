@@ -460,7 +460,7 @@ src_prepare() {
 src_install() {
 	cargo_src_install
 	domenu assets/neovide.desktop
-	newicon assets/neovide.svg neovide
+	newicon assets/neovide.svg
 }
 
 pkg_postinst() {
