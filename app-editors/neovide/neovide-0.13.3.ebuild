@@ -225,7 +225,7 @@ CRATES="
 	proc-macro-crate@3.2.0
 	proc-macro2@1.0.86
 	quick-xml@0.36.2
-	quote@1.0.37
+	quote@1.0.36
 	rand@0.7.3
 	rand@0.8.5
 	rand_chacha@0.2.2
