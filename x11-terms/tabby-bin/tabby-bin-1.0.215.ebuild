@@ -57,9 +57,9 @@ src_install(){
 		"GNOME;GTK;Utility;" \
 		"GenericName=Tabby\n\nStartupNotify=true\nStartupWMClass=tabby"
 	# No icons for now
-	doicon ../tabby.svg
-	doicon ../tabby.ico
-	for i in {16,24,32,48,64,72,96,128,512}; do
-		doicon -s "${i}" ../tabby-"${i}".png
-	done
+	#doicon ../tabby.svg
+	#doicon ../tabby.ico
+	#for i in {16,24,32,48,64,72,96,128,512}; do
+	#	doicon -s "${i}" ../tabby-"${i}".png
+	#done
 }
