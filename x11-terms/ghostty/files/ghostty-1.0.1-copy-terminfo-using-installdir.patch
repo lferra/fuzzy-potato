@@ -1,0 +1,39 @@
+--- a/build.zig.orig	2024-12-31 21:47:50.000000000 +0100
++++ b/build.zig	2025-01-01 14:35:17.528802087 +0100
+@@ -531,24 +531,24 @@
+                 // Use cp -R instead of Step.InstallDir because we need to preserve
+                 // symlinks in the terminfo database. Zig's InstallDir step doesn't
+                 // handle symlinks correctly yet.
+-                const copy_step = RunStep.create(b, "copy terminfo db");
+-                copy_step.addArgs(&.{ "cp", "-R" });
+-                copy_step.addFileArg(path);
+-                copy_step.addArg(b.fmt("{s}/share", .{b.install_path}));
+-                b.getInstallStep().dependOn(&copy_step.step);
++                const install_dir_step = b.addInstallDirectory(.{
++                    .source_dir = path,
++                    .install_dir = .prefix,
++                    .install_subdir = "share/terminfo",
++                });
++                b.getInstallStep().dependOn(&install_dir_step.step);
+             }
+ 
+             if (target.result.os.tag == .macos and exe_ != null) {
+                 // Use cp -R instead of Step.InstallDir because we need to preserve
+                 // symlinks in the terminfo database. Zig's InstallDir step doesn't
+                 // handle symlinks correctly yet.
+-                const copy_step = RunStep.create(b, "copy terminfo db");
+-                copy_step.addArgs(&.{ "cp", "-R" });
+-                copy_step.addFileArg(path);
+-                copy_step.addArg(
+-                    b.fmt("{s}/Ghostty.app/Contents/Resources", .{b.install_path}),
+-                );
+-                b.getInstallStep().dependOn(&copy_step.step);
++                const install_dir_step = b.addInstallDirectory(.{
++                    .source_dir = path,
++                    .install_dir = .prefix,
++                    .install_subdir = "Ghostty.app/Contents/Resources/terminfo",
++                });
++                b.getInstallStep().dependOn(&install_dir_step.step);
+             }
+         }
+     }
