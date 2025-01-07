@@ -35,7 +35,6 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_install() {
-	python_doscript macrecovery macrecovery
 	dobin quickemu
 	dobin quickget
 }
