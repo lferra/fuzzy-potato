@@ -34,13 +34,6 @@ BDEPEND="
 
 DOCS=(
 	"AUTHORS"
-	"ChangeLog"
-	"NEWS.md"
-	"NOT-BUGS.md"
-	"PHILOSOPHY.md"
-	"README.md"
-	"README.Music.md"
-	"README.Strife.md"
 )
 
 PATCHES=(
