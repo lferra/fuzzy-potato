@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}"
 BDEPEND="virtual/pkgconfig"
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-0.4.0_adjust-cflags.patch
+	"${FILESDIR}"/${PN}-0.5.1_adjust-cflags.patch
 )
 
 MAKEOPTS="${MAKEOPTS} -C src"

@@ -1,0 +1,12 @@
+--- a/src/Makefile.orig	2025-04-05 20:53:52.425380194 +0200
++++ b/src/Makefile	2025-04-05 20:54:32.212051579 +0200
+@@ -13,8 +13,7 @@
+ DEPFLAGS = -MT $@ -MMD -MP -MF $(DEPDIR)/$*.d
+ 
+ CFLAGS ?= -ggdb -fno-omit-frame-pointer -fPIE -O2
+-CFLAGS += -Wall -Werror
+-CFLAGS += -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=3
++CFLAGS += -Wall
+ CFLAGS += -DVERSION=\"$(VERSION)\"
+ CFLAGS += -Wno-error=deprecated-declarations
+ 
