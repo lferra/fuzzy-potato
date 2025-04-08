@@ -16,7 +16,7 @@ KEYWORDS="amd64"
 BDEPEND="${MESON_DEPEND}"
 RDEPEND="dev-libs/gjs
 	gui-libs/gtk
-	gui-libs/libadwaita
+	>=gui-libs/libadwaita-1.7:=
 	net-libs/webkit-gtk:6[introspection]
 	sys-devel/gettext"
 
