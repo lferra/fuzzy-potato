@@ -7,7 +7,7 @@ inherit meson plocale xdg gnome2-utils
 DESCRIPTION="gtk ebook reader built with gjs"
 HOMEPAGE="https://github.com/johnfactotum/foliate/"
 #SRC_URI="https://dev.gentoo.org/~grozin/${P}.tar.bz2"
-SRC_URI="https://github.com/johnfactotum/foliate/releases/download/${PV}/com.github.johnfactotum.Foliate-${PV}.tar.xz"
+SRC_URI="https://github.com/johnfactotum/${PN}/archive/refs/tags/${PV}.tar.gz"
 
 LICENSE="GPL-3+"
 SLOT="0"
