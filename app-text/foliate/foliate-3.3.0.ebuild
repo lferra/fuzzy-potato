@@ -21,7 +21,7 @@ RDEPEND="dev-libs/gjs
 	net-libs/webkit-gtk:6[introspection]
 	sys-devel/gettext"
 
-S="${WORKDIR}"
+S="${WORKDIR}/com.github.johnfactotum.Foliate-3.3.0"
 
 src_prepare() {
 	default
