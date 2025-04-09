@@ -21,6 +21,8 @@ RDEPEND="dev-libs/gjs
 	net-libs/webkit-gtk:6[introspection]
 	sys-devel/gettext"
 
+S="${WORKDIR}"
+
 src_prepare() {
 	default
 	xdg_environment_reset
