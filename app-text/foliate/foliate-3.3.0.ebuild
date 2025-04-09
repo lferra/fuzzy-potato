@@ -6,9 +6,7 @@ PLOCALES="ar cs de el es eu fa_IR fr gl he hi hr hu id ie it ko nb nl nn oc pt_B
 inherit meson plocale xdg gnome2-utils
 DESCRIPTION="gtk ebook reader built with gjs"
 HOMEPAGE="https://github.com/johnfactotum/foliate/"
-#SRC_URI="https://dev.gentoo.org/~grozin/${P}.tar.bz2"
 SRC_URI="https://github.com/johnfactotum/${PN}/releases/download/${PV}/com.github.johnfactotum.Foliate-${PV}.tar.xz"
-#SRC_URI="https://github.com/johnfactotum/${PN}/archive/refs/tags/${PV}.tar.gz"
 
 LICENSE="GPL-3+"
 SLOT="0"
@@ -21,7 +19,7 @@ RDEPEND="dev-libs/gjs
 	net-libs/webkit-gtk:6[introspection]
 	sys-devel/gettext"
 
-S="${WORKDIR}/com.github.johnfactotum.Foliate-3.3.0"
+S="${WORKDIR}/com.github.johnfactotum.Foliate-${PV}"
 
 src_prepare() {
 	default
