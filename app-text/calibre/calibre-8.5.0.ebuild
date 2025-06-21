@@ -128,7 +128,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-7.0.0-jxr-test.patch"
 
 	# Backport of https://github.com/kovidgoyal/calibre/commit/ae83537ef8b338724d389520ad6fbbebe83d1b0a
-	"${FILESDIR}/${P}-lfs64.patch"
+	# "${FILESDIR}/${P}-lfs64.patch"
 )
 
 src_prepare() {
