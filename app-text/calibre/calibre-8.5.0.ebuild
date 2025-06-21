@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 PYTHON_REQ_USE="sqlite,ssl"
 
 inherit edo toolchain-funcs python-single-r1 qmake-utils verify-sig xdg
@@ -36,7 +36,7 @@ LICENSE="
 	PSF-2
 "
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64 ~arm64"
 IUSE="+font-subsetting ios speech +system-mathjax test +udisks unrar"
 
 RESTRICT="!test? ( test )"
@@ -126,6 +126,9 @@ PATCHES=(
 	# We don't (yet?) package libjxr and it seems to be dead upstream
 	# (last commit in 2017)
 	"${FILESDIR}/${PN}-7.0.0-jxr-test.patch"
+
+	# Backport of https://github.com/kovidgoyal/calibre/commit/ae83537ef8b338724d389520ad6fbbebe83d1b0a
+	"${FILESDIR}/${P}-lfs64.patch"
 )
 
 src_prepare() {
