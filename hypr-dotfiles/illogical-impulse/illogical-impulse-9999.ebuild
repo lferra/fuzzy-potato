@@ -177,6 +177,6 @@ src_install() {
 	insinto /etc/eselect/hypr-dotfiles/configs/illogical-impulse/home
 	doins -r .config .local
 
-	insinto /
-	doins -r "Extras/gnome-text-editor themes (Paste to root)/usr"
+	#insinto /
+	#doins -r "Extras/gnome-text-editor themes (Paste to root)/usr"
 }
