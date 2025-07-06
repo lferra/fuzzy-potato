@@ -63,7 +63,7 @@ RDEPEND_GNOME="
 
 RDEPEND_GTK="
 	dev-libs/gobject-introspection
-	gui-apps/yad
+	gnome-extra/yad
 	gui-libs/gdk-pixbuf-loader-webp
 	gui-libs/gtk-layer-shell
 	sys-power/upower
