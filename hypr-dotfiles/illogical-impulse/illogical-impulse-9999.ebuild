@@ -83,7 +83,6 @@ RDEPEND_PORTAL="
 RDEPEND_PYMYC="
 	dev-python/libsass
 	dev-python/material-color-utilities
-	gui-apps/gradience
 "
 
 RDEPEND_PYTHON="
