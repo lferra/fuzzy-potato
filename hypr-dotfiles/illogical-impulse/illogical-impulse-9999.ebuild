@@ -76,7 +76,7 @@ RDEPEND_GTK="
 RDEPEND_PORTAL="
 	sys-apps/xdg-desktop-portal
 	sys-apps/xdg-desktop-portal-gtk
-	sys-apps/xdg-desktop-portal-hyprland
+	gui-libs/xdg-desktop-portal-hyprland
 "
 
 # TODO: materialyoucolor
