@@ -148,7 +148,6 @@ RDEPEND_WIDGETS="
 
 # TODO: microtex, oneui4-icons
 RDEPEND="
-	gui-apps/ags
 	${RDEPEND_AUDIO}
 	${RDEPEND_BACKLIGHT}
 	${RDEPEND_BASIC}
