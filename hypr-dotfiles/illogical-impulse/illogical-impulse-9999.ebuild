@@ -110,9 +110,9 @@ RDEPEND_WIDGETS="
 	gui-apps/wl-clipboard
 	gui-apps/wlogout
 	gui-libs/hyprutils
-	hypr-apps/hypridle
-	hypr-apps/hyprlock
-	hypr-apps/hyprpicker
+	gui-apps/hypridle
+	gui-apps/hyprlock
+	gui-apps/hyprpicker
 "
 
 # TODO: microtex, oneui4-icons
