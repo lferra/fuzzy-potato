@@ -91,7 +91,7 @@ RDEPEND_PYTHON="
 	dev-python/pillow
 	dev-python/setuptools-scm
 	dev-python/wheel
-	x11-misc/pywal
+	x11-misc/pywal16
 "
 
 RDEPEND_SCREENCAPTURE="
