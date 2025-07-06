@@ -12,106 +12,138 @@ LICENSE="GPL-3+"
 SLOT="0"
 
 RDEPEND_AUDIO="
-	dev-libs/libdbusmenu[gtk3]
-	gui-apps/swww
-	media-sound/pavucontrol
-	media-sound/playerctl
+	media-sound/cava
+	media-sound/pavucontrol-qt
 	media-video/wireplumber:*
+	dev-libs/libdbusmenu[gtk3]
+	media-sound/playerctl
 "
 
 RDEPEND_BACKLIGHT="
+	x11-misc/gammastep
+	app-misc/geoclue
 	app-misc/brightnessctl
 	app-misc/ddcutil:=
 "
 
 RDEPEND_BASIC="
-	app-misc/cliphist
-	app-misc/jq
-	dev-build/cmake
-	dev-build/meson
-	dev-lang/typescript
-	dev-libs/gjs
-	gui-apps/fuzzel
-	net-libs/nodejs:*[npm]
 	net-misc/axel
-	sys-apps/ripgrep
 	sys-devel/bc
+	sys-apps/coreutils
+	app-misc/cliphist
+	dev-build/cmake
+	net-misc/curl
+	net-misc/rsync
+	net-misc/wget
+	sys-apps/ripgrep
+	app-misc/jq
+	dev-build/meson
 	x11-misc/xdg-user-dirs
 "
 
 # TODO: Readex Pro, Material Design icons, Rubik, Gabarito
-RDEPEND_FONTS="
-	app-shells/fish
-	app-shells/starship
-	dev-qt/qtwayland:5
-	gui-apps/foot
-	media-fonts/nerdfonts
-	media-libs/fontconfig:1.0
-	x11-misc/qt5ct
+RDEPEND_FONTS_THEMES="
 	x11-themes/adw-gtk3
+	kde-misc/darkly
+	sys-apps/eza
+	app-shells/fish
+	media-libs/fontconfig:1.0
+	x11-terms/kitty
+	app-shells/starship
+	media-fonts/nerd-fonts
 "
 
-# TODO: blueberry
-RDEPEND_GNOME="
-	gnome-base/gnome-control-center:2
+RDEPEND_HYPRLAND="
+	gui-libs/hyprutils
+	gui-apps/hyprpicker
+	dev-libs/hyprlang
+	gui-apps/hypridle
+	gui-libs/hyprland-qt-support
+	gui-libs/hyprland-qt-support
+	gui-apps/hyprlock
+	gui-libs/hyprcursor
+	dev-util/hyprwayland-scanner
+	gui-wm/hyprland
+	gui-libs/xdg-desktop-portal-hyprland
+	gui-apps/wl-clipboard
+"
+
+RDEPEND_KDE="
+	kde-plasma/bluedevil
 	gnome-base/gnome-keyring
-	gnome-extra/polkit-gnome
 	net-misc/networkmanager
-	net-wireless/gnome-bluetooth:3
-	x11-misc/gammastep
+	kde-plasma/plasma-nm
+	kde-plasma/polkit-kde-agent
+	kde-apps/dolphin
+	kde-plasma/systemsettings
 "
 
-RDEPEND_GTK="
-	dev-libs/gobject-introspection
-	gnome-extra/yad
-	gui-libs/gdk-pixbuf-loader-webp
-	gui-libs/gtk-layer-shell
-	sys-power/upower
-	x11-libs/gtk+:3
-	x11-libs/gtksourceview:3.0
-	x11-misc/xdg-user-dirs-gtk
-	x11-misc/ydotool
+RDEPEND_MICROTEX="
+	dev-libs/tinyxml2
+	dev-cpp/gtkmm:3.0
+	dev-cpp/gtksourceviewmm
+	dev-cpp/cairomm
 "
 
 RDEPEND_PORTAL="
 	sys-apps/xdg-desktop-portal
+	kde-plasma/xdg-desktop-portal-kde
 	sys-apps/xdg-desktop-portal-gtk
 	gui-libs/xdg-desktop-portal-hyprland
 "
 
-# TODO: materialyoucolor
-RDEPEND_PYMYC="
-	dev-python/libsass
-	dev-python/material-color-utilities
-"
-
 RDEPEND_PYTHON="
-	dev-python/build
-	dev-python/pillow
-	dev-python/setuptools-scm
-	dev-python/wheel
-	x11-misc/pywal16
+	llvm-core/clang
+	dev-python/uv
+	gui-libs/gtk
+	gui-libs/libadwaita
+	net-libs/libsoup:3.0
+	dev-libs/libportal
+	dev-libs/gobject-introspection
+	dev-lang/sassc
+	media-libs/opencv[python]
 "
 
 RDEPEND_SCREENCAPTURE="
-	app-text/tesseract:*
-	gui-apps/grim
+	gui-apps/hyprshot
 	gui-apps/slurp
 	gui-apps/swappy
+	app-text/tesseract:*
 	gui-apps/wf-recorder
 "
 
-# TODO: anyrun
+RDEPEND_TOOLKIT="
+	kde-apps/kdialog
+	dev-qt/qt5compat:6
+	dev-qt/qtbase:6
+	dev-qt/qtdeclarative:6
+	dev-qt/qtimageformats:6
+	dev-qt/qtmultimedia:6
+	dev-qt/qtpositioning:6
+	dev-qt/qtquicktimeline:6
+	dev-qt/qtsensors:6
+	dev-qt/qtsvg:6
+	dev-qt/qttools:6
+	dev-qt/qttranslations:6
+	dev-qt/qtvirtualkeyboard:6
+	dev-qt/qtwayland:6
+	kde-frameworks/syntax-highlighting:6
+	sys-power/upower
+	gui-apps/wtype
+	x11-misc/ydotool
+"
+
 RDEPEND_WIDGETS="
-	dev-python/psutil
-	dev-python/pywayland
-	dev-ruby/sass:3.7
-	gui-apps/wl-clipboard
-	gui-apps/wlogout
-	gui-libs/hyprutils
+	gui-apps/fuzzel
+	dev-libs/glib
 	gui-apps/hypridle
+	gui-libs/hyprutils
 	gui-apps/hyprlock
 	gui-apps/hyprpicker
+	gui-apps/quickshell
+	gui-apps/swww
+	app-i18n/translate-shell
+	gui-apps/wlogout
 "
 
 # TODO: microtex, oneui4-icons
@@ -121,13 +153,14 @@ RDEPEND="
 	${RDEPEND_BACKLIGHT}
 	${RDEPEND_BASIC}
 	x11-themes/bibata-xcursors
-	${RDEPEND_FONTS}
-	${RDEPEND_GNOME}
-	${RDEPEND_GTK}
+	${RDEPEND_FONTS_THEMES}
+	${RDEPEND_HYPRLAND}
+	${RDEPEND_KDE}
+	${RDEPEND_MICROTEX}
 	${RDEPEND_PORTAL}
-	${RDEPEND_PYMYC}
 	${RDEPEND_PYTHON}
 	${RDEPEND_SCREENCAPTURE}
+	${RDEPEND_TOOLKIT}
 	${RDEPEND_WIDGETS}
 "
 
