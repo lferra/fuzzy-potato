@@ -34,7 +34,7 @@ DOCS=( "../README" )
 
 S="${WORKDIR}/${PN}/gtk"
 
-PATCHES=( "${FILESDIR}"/scite-5.3.5-gcc-13-fix-bgo892431.patch )
+#PATCHES=( "${FILESDIR}"/scite-5.3.5-gcc-13-fix-bgo892431.patch )
 
 pkg_setup() {
 	use lua && lua-single_pkg_setup
