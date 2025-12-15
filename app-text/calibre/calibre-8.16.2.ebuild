@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..13} )
+PYTHON_COMPAT=( python3_{11..13} )
 PYTHON_REQ_USE="sqlite,ssl"
 
 inherit edo toolchain-funcs python-single-r1 qmake-utils verify-sig xdg
@@ -126,9 +126,7 @@ PATCHES=(
 	# We don't (yet?) package libjxr and it seems to be dead upstream
 	# (last commit in 2017)
 	"${FILESDIR}/${PN}-7.0.0-jxr-test.patch"
-
-	# Backport of https://github.com/kovidgoyal/calibre/commit/ae83537ef8b338724d389520ad6fbbebe83d1b0a
-	# "${FILESDIR}/${P}-lfs64.patch"
+	"${FILESDIR}/${PN}-8.9.0-piper.patch"
 )
 
 src_prepare() {
@@ -144,9 +142,10 @@ src_prepare() {
 	#
 	# If in doubt about a problem, checking Fedora's packaging is recommended.
 
-	# Disable unnecessary privilege dropping for bug #287067.
-	sed -e "s:if os.geteuid() == 0:if False and os.geteuid() == 0:" \
-		-i setup/install.py || die "sed failed to patch install.py"
+	# Disable privilege dropping for bug #287067 and generally because desktop
+	# login user != portage.
+	sed -e "s:SUDO_:__DISABLED_SUDO_:" \
+		-i setup/__init__.py || die
 
 	# This is only ever used at build time. It contains a small embedded copy
 	# of the rapydscript-ng compiler usable inside of qtwebengine, if you don't
@@ -224,7 +223,7 @@ src_install() {
 	#    raise ValueError, 'unknown locale: %s' % localename
 	#ValueError: unknown locale: 46
 	export -n LANG LANGUAGE ${!LC_*}
-	export LC_ALL=C.utf8 # bug #709682
+	export LC_ALL=C.UTF-8 # bug #709682
 
 	# Bug #295672 - Avoid sandbox violation in ~/.config by forcing
 	# variables to point to our fake temporary $HOME.
