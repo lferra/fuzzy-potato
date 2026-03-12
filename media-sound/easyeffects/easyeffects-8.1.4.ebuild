@@ -54,7 +54,6 @@ RDEPEND="
 	>=media-video/pipewire-1.0.6:=[sound-server]
 	sci-libs/fftw:3.0=
 	sci-libs/gsl:=
-	webengine? ( dev-qt/qtwebengine:6[qml] )
 "
 DEPEND="${RDEPEND}
 	media-libs/ladspa-sdk
@@ -79,11 +78,6 @@ pkg_pretend() {
 
 src_prepare() {
 	default
-
-	if use !webengine; then
-		eapply "${FILESDIR}"/easyeffects-8.0.4-remove-webengine.patch
-	fi
-
 	cmake_prepare
 }
 
