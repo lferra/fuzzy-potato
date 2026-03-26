@@ -125,7 +125,7 @@ PATCHES=(
 	# Skip calling a binary (JxrDecApp) from libjxr which is used for tests
 	# We don't (yet?) package libjxr and it seems to be dead upstream
 	# (last commit in 2017)
-	"${FILESDIR}/${PN}-7.0.0-jxr-test.patch"
+	"${FILESDIR}/${PN}-9.5.0-jxr-test.patch"
 	"${FILESDIR}/${PN}-8.9.0-piper.patch"
 )
 
