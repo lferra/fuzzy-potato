@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{11..13} )
+PYTHON_COMPAT=( python3_14 )
 PYTHON_REQ_USE="sqlite,ssl"
 
 inherit edo toolchain-funcs python-single-r1 qmake-utils verify-sig xdg
