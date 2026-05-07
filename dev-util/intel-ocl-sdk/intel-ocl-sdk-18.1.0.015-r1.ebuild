@@ -50,7 +50,7 @@ src_install() {
 	doins "${S}/opt/intel/opencl_compilers_and_libraries_${PV}/linux/compiler/lib/clbltfnshared.rtl"
 	insinto "${INTEL_INSTALL_PATH}/lib64"
 	insopts -m 755
-	doins "${WORKDIR}/${INTEL_CL}/compiler/lib/intel64_lin/"*
+	doins "${S}/opt/intel/opencl_compilers_and_libraries_${PV}/linux/compiler/lib/intel64_lin/"*
 
 	dodir "${INTEL_VENDOR_DIR}"
 	dosym -r "${INTEL_INSTALL_PATH}/lib64/libOpenCL.so"     "${INTEL_VENDOR_DIR}/libOpenCL.so"
