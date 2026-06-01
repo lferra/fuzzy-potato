@@ -79,11 +79,6 @@ pkg_pretend() {
 
 src_prepare() {
 	default
-
-	if use !webengine; then
-		eapply "${FILESDIR}"/easyeffects-8.0.4-remove-webengine.patch
-	fi
-
 	cmake_prepare
 }
 
