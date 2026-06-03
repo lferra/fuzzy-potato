@@ -20,7 +20,6 @@ fi
 LICENSE="GPL-3"
 SLOT="0"
 
-IUSE="webengine"
 # No real tests. ECM brings appstream test which isn't relevant downstream.
 RESTRICT="test"
 
@@ -54,7 +53,7 @@ RDEPEND="
 	>=media-video/pipewire-1.0.6:=[sound-server]
 	sci-libs/fftw:3.0=
 	sci-libs/gsl:=
-	webengine? ( dev-qt/qtwebengine:6[qml] )
+	media-libs/libmysofa
 "
 DEPEND="${RDEPEND}
 	media-libs/ladspa-sdk
