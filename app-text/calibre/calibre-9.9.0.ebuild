@@ -80,6 +80,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 		dev-python/regex[${PYTHON_USEDEP}]
 		dev-python/xxhash[${PYTHON_USEDEP}]
 		>=dev-python/zeroconf-0.75.0[${PYTHON_USEDEP}]
+		dev-python/tzlocal[${PYTHON_USEDEP}]
 	')
 	dev-qt/qtbase:6=[gui,widgets]
 	dev-qt/qtimageformats:6
