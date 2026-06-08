@@ -105,11 +105,6 @@ src_compile() {
 	if use cuda; then
 		addpredict /dev/char/
 		cuda_add_sandbox
-
-		sed -i \
-			-e 's|set(CUDAToolkit_ROOT "" CACHE PATH "Initial cache" FORCE)|set(CUDAToolkit_ROOT "/opt/cuda" CACHE PATH "Initial cache" FORCE)|' \
-			"${BUILD_DIR}"/devices/cuda/tmp/OpenImageDenoise_device_cuda-cache-RelWithDebInfo.cmake \
-			|| die "failed to fix CUDAToolkit_ROOT in CUDA subproject cache"
 	fi
 
 	cmake_src_compile
