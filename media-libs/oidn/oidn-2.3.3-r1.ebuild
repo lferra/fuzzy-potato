@@ -79,6 +79,7 @@ src_configure() {
 		-DOIDN_DEVICE_CPU="yes"
 		-DOIDN_DEVICE_CUDA="$(usex cuda)"
 		-DOIDN_DEVICE_HIP="$(usex hip)"
+		-DCUDAToolkit_ROOT="/opt/cuda"
 		# -DOIDN_DEVICE_SYCL="$(usex sycl)"
 	)
 
