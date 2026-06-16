@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{7..13} pypy )
+PYTHON_COMPAT=( python3_{7..14} pypy )
 
 inherit distutils-r1 systemd udev
 
