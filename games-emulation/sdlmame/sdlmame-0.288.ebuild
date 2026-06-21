@@ -114,10 +114,20 @@ src_compile() {
 	}
 	my_emake -j1 generate
 
-	# Workaround: GENie emette un "-I" vuoto subito prima del vero
-	# "-I/usr/include/pipewire-0.3", che viene "mangiato" da gcc come
-	# argomento del -I vuoto invece di essere usato come directory di
-	# ricerca → fatal error: pipewire/pipewire.h: No such file or directory
+	# Bug upstream in GENie (.make di osd_sdl): un "-I" vuoto precede
+	# il vero "-I/usr/include/pipewire-0.3", che viene quindi inghiottito
+	# come argomento del -I vuoto -> pipewire_sound.cpp non trova
+	# pipewire/pipewire.h anche se il path è (apparentemente) corretto
+	# nella riga di comando di gcc.
+	#
+	# I .make vengono prodotti da GENie solo all'inizio di QUESTA
+	# invocazione (non da "generate"), quindi: primo tentativo (fallisce
+	# di proposito), patch dei .make ora che esistono, secondo tentativo
+	# che riprende incrementalmente da dove si era interrotto.
+	my_emake ${targetargs} \
+		SDL_INI_PATH="\$\$\$\$HOME/.sdlmame;/etc/${PN}" \
+		USE_QTDEBUG=${qtdebug} || true
+
 	find build/projects -name '*.make' -exec \
 		sed -i -e 's/ -I -I\/usr\/include\/pipewire-0\.3/ -I\/usr\/include\/pipewire-0.3/g' {} + \
 		|| die "patch pipewire -I fix failed"
