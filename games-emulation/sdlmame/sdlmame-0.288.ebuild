@@ -114,17 +114,11 @@ src_compile() {
 	}
 	my_emake -j1 generate
 
-	# Bug upstream in GENie (.make di osd_sdl): un "-I" vuoto precede
-	# il vero "-I/usr/include/pipewire-0.3", che viene quindi inghiottito
-	# come argomento del -I vuoto -> pipewire_sound.cpp non trova
-	# pipewire/pipewire.h anche se il path è (apparentemente) corretto
-	# nella riga di comando di gcc.
-	#
-	# I .make vengono prodotti da GENie solo all'inizio di QUESTA
-	# invocazione (non da "generate"), quindi: primo tentativo (fallisce
-	# di proposito), patch dei .make ora che esistono, secondo tentativo
-	# che riprende incrementalmente da dove si era interrotto.
-	my_emake ${targetargs} \
+	# Primo passaggio, atteso fallire su pipewire_sound.cpp (bug upstream
+	# nei flag -I generati da GENie per osd_sdl.make). "nonfatal" evita
+	# che il fallimento di "emake" inneschi un die() immediato, dandoci
+	# modo di patchare i .make e rilanciare la build (incrementale).
+	nonfatal my_emake ${targetargs} \
 		SDL_INI_PATH="\$\$\$\$HOME/.sdlmame;/etc/${PN}" \
 		USE_QTDEBUG=${qtdebug} || true
 
