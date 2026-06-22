@@ -125,6 +125,9 @@ src_compile() {
 			{} + \
 		|| die "patch pipewire -I / INI_PATH quoting fix failed"
 
+	einfo "DEBUG: stato di INI_PATH subito dopo la sed, prima della build finale"
+	grep -n "INI_PATH=" build/projects/sdl/mame/gmake-linux/osd_sdl.make | head -1
+
 	my_emake ${targetargs} \
 		SDL_INI_PATH="\$\$\$\$HOME/.sdlmame;/etc/${PN}" \
 		USE_QTDEBUG=${qtdebug}
