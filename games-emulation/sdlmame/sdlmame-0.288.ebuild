@@ -114,17 +114,25 @@ src_compile() {
 	}
 	my_emake -j1 generate
 
-	# Primo passaggio, atteso fallire su pipewire_sound.cpp (bug upstream
-	# nei flag -I generati da GENie per osd_sdl.make). "nonfatal" evita
-	# che il fallimento di "emake" inneschi un die() immediato, dandoci
-	# modo di patchare i .make e rilanciare la build (incrementale).
+	# Primo passaggio, atteso fallire su pipewire_sound.cpp.
 	nonfatal my_emake ${targetargs} \
 		SDL_INI_PATH="\$\$\$\$HOME/.sdlmame;/etc/${PN}" \
 		USE_QTDEBUG=${qtdebug} || true
 
+	# Due bug indipendenti nei .make generati da GENie:
+	# 1) "-I" orfano che inghiotte il vero "-I/usr/include/pipewire-0.3"
+	#    -> pipewire_sound.cpp non trova pipewire/pipewire.h
+	# 2) due backslash di troppo prima delle virgolette della define
+	#    INI_PATH (-D'INI_PATH=\"$HOME/...\"' invece di
+	#    -D'INI_PATH="$HOME/..."') -> espansione macro rotta in
+	#    sdlopts.cpp ("stray '\' in program"). Il $HOME va lasciato
+	#    letterale: lo espande mame stesso a runtime, non la shell.
 	find build/projects -name '*.make' -exec \
-		sed -i -e 's/ -I -I\/usr\/include\/pipewire-0\.3/ -I\/usr\/include\/pipewire-0.3/g' {} + \
-		|| die "patch pipewire -I fix failed"
+		sed -i \
+			-e 's/ -I -I\/usr\/include\/pipewire-0\.3/ -I\/usr\/include\/pipewire-0.3/g' \
+			-e 's/INI_PATH=\\"\$HOME\/\.sdlmame;\/etc\/sdlmame\\"/INI_PATH="$HOME\/.sdlmame;\/etc\/sdlmame"/g' \
+			{} + \
+		|| die "patch pipewire -I / INI_PATH quoting fix failed"
 
 	my_emake ${targetargs} \
 		SDL_INI_PATH="\$\$\$\$HOME/.sdlmame;/etc/${PN}" \
