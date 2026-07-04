@@ -1,0 +1,10 @@
+--- a/include/vulkan/utility/vk_struct_helper.hpp	2026-07-04 21:48:22.765909523 +0000
++++ b/include/vulkan/utility/vk_struct_helper.hpp	2026-07-04 21:48:22.769909523 +0000
+@@ -1329,6 +1329,7 @@
+ template <> inline VkStructureType GetSType<VkPhysicalDeviceRayQueryFeaturesKHR>() { return VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR; }
+ template <> inline VkStructureType GetSType<VkPhysicalDeviceMeshShaderFeaturesEXT>() { return VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MESH_SHADER_FEATURES_EXT; }
+ template <> inline VkStructureType GetSType<VkPhysicalDeviceMeshShaderPropertiesEXT>() { return VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MESH_SHADER_PROPERTIES_EXT; }
++template <> inline VkStructureType GetSType<VkPhysicalDeviceShaderOCPMicroscalingTypesFeaturesEXT>() { return VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_OCP_MICROSCALING_TYPES_FEATURES_EXT; }
+ 
+ // Find an entry of the given type in the const pNext chain
+ // returns nullptr if the entry is not found
