@@ -185,7 +185,6 @@ src_compile() {
 		--system-liberation_fonts
 	if use system-mathjax; then
 		edo ${EPYTHON} setup.py mathjax --path-to-mathjax "${EPREFIX}"/usr/share/mathjax --system-mathjax
-		edo ${EPYTHON} setup.py rapydscript
 	fi
 }
 
