@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{11..13} )
+PYTHON_COMPAT=( python3_14 )
 PYTHON_REQ_USE="sqlite,ssl"
 
 inherit edo toolchain-funcs python-single-r1 qmake-utils verify-sig xdg
@@ -80,6 +80,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 		dev-python/regex[${PYTHON_USEDEP}]
 		dev-python/xxhash[${PYTHON_USEDEP}]
 		>=dev-python/zeroconf-0.75.0[${PYTHON_USEDEP}]
+		dev-python/tzlocal[${PYTHON_USEDEP}]
 	')
 	dev-qt/qtbase:6=[gui,widgets]
 	dev-qt/qtimageformats:6
@@ -125,7 +126,7 @@ PATCHES=(
 	# Skip calling a binary (JxrDecApp) from libjxr which is used for tests
 	# We don't (yet?) package libjxr and it seems to be dead upstream
 	# (last commit in 2017)
-	"${FILESDIR}/${PN}-7.0.0-jxr-test.patch"
+	"${FILESDIR}/${PN}-9.12.0-jxr-test.patch"
 	"${FILESDIR}/${PN}-8.9.0-piper.patch"
 )
 
@@ -184,7 +185,6 @@ src_compile() {
 		--system-liberation_fonts
 	if use system-mathjax; then
 		edo ${EPYTHON} setup.py mathjax --path-to-mathjax "${EPREFIX}"/usr/share/mathjax --system-mathjax
-		edo ${EPYTHON} setup.py rapydscript
 	fi
 }
 
