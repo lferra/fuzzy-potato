@@ -1,0 +1,43 @@
+Use the system nv-codec-headers instead of fetching over the network
+
+Sunshine now only looks for the NV codec headers either bundled inside
+an already-prepared FFmpeg tree, or by having CPM git-clone
+FFmpeg/nv-codec-headers itself. On Gentoo, FFMPEG_PREPARED_BINARIES
+isn't populated yet by the time Sunshine's own CMake configure step
+runs, so it always falls through to the CPM path, which then tries to
+reach github.com during the configure phase -- something Portage's
+network sandbox blocks (only src_unpack may touch the network), so it
+always fails:
+
+  fatal: unable to access 'https://github.com/FFmpeg/nv-codec-headers.git/':
+  Could not resolve host: github.com (Could not contact DNS servers)
+
+We already pin =media-libs/nv-codec-headers-13* via DEPEND, so just
+point CMake at the system copy instead of touching the network at all.
+--- a/cmake/dependencies/nv_codec_headers.cmake
++++ b/cmake/dependencies/nv_codec_headers.cmake
+@@ -3,19 +3,11 @@
+ set(CPM_PACKAGE_LOCK_ENABLED OFF)
+
+ if(NOT APPLE)
+-    set(SUNSHINE_PREPARED_NV_CODEC_HEADERS
+-            "${FFMPEG_PREPARED_BINARIES}/include/ffnvcodec/nvEncodeAPI.h")
+-
+-    if(DEFINED FFMPEG_PREPARED_BINARIES AND EXISTS "${SUNSHINE_PREPARED_NV_CODEC_HEADERS}")
+-        # Prepared FFmpeg bundles include the NV codec headers used to build them.
+-        set(NV_CODEC_HEADERS_13_1_INCLUDE_DIR "${FFMPEG_PREPARED_BINARIES}/include")
+-        message(STATUS "Using NV codec headers from prepared FFmpeg binaries")
+-    else()
+-        CPMGetPackage(nv_codec_headers_13_1)
+-        set(NV_CODEC_HEADERS_13_1_INCLUDE_DIR "${nv_codec_headers_13_1_SOURCE_DIR}/include")
+-    endif()
+-
+-    unset(SUNSHINE_PREPARED_NV_CODEC_HEADERS)
++    # Gentoo: use the system media-libs/nv-codec-headers package (pinned via
++    # DEPEND) instead of fetching it from the network during src_configure,
++    # which Portage's network sandbox blocks.
++    find_path(NV_CODEC_HEADERS_13_1_INCLUDE_DIR NAMES ffnvcodec/nvEncodeAPI.h REQUIRED)
++    message(STATUS "Using system NV codec headers: ${NV_CODEC_HEADERS_13_1_INCLUDE_DIR}")
+ endif()
+
+ if(WIN32)

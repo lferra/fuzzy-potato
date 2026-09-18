@@ -216,6 +216,7 @@ BDEPEND="
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-new-cuda.patch
+	"${FILESDIR}"/${PN}-nv-codec-headers-system.patch
 )
 
 # Make this mess a bit simpler.
