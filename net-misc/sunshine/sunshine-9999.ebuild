@@ -252,7 +252,7 @@ src_unpack() {
 		git-r3_src_unpack
 
 		local EGIT_REPO_URI="https://github.com/LizardByte/Sunshine.git"
-		local EGIT_SUBMODULES=( third-party/{glad,inputtino,libdisplaydevice,lizardbyte-common,moonlight-common-c{,/enet,/nanors},tray,Simple-Web-Server,wlr-protocols} )
+		local EGIT_SUBMODULES=( third-party/{glad,inputtino,libdisplaydevice,libvirtualhid,lizardbyte-common,moonlight-common-c{,/enet,/nanors},tray,Simple-Web-Server,wlr-protocols} )
 		unset EGIT_CHECKOUT_DIR EGIT_COMMIT EGIT_BRANCH
 		git-r3_src_unpack
 
