@@ -215,7 +215,6 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-new-boost.patch
 	"${FILESDIR}"/${PN}-new-cuda.patch
 )
 
